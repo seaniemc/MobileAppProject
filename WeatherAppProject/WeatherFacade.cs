@@ -27,5 +27,22 @@ namespace WeatherAppProject
 
         }
 
+        public async static Task<ConditionsRootObject> GetWeatherCity(string city)
+        {
+            var http = new HttpClient();
+            var response = await http.GetAsync("http://api.wunderground.com/api/817ffb35035be408/conditions/q/CA/San_Francisco.json");
+            var jsonMessage = await response.Content.ReadAsStringAsync();
+            var serializer = new DataContractJsonSerializer(typeof(ConditionsRootObject));
+
+            var ms = new MemoryStream(Encoding.UTF8.GetBytes(jsonMessage));
+
+            var cityresult = (ConditionsRootObject)serializer.ReadObject(ms);
+
+            return cityresult;
+
+        }
+
     }
+
+    
 }
