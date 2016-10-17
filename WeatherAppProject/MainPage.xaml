@@ -8,6 +8,11 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel HorizontalAlignment="Left">
+            <Button Name="WeatherButton" Content="Lets Get the Weather" Click="WeatherButton_Click">
+            </Button>
+            <TextBlock Name="WeatherResultText"></TextBlock>
+        </StackPanel>
 
     </Grid>
 </Page>

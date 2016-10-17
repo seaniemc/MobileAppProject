@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using WeatherAppProject.Model;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -25,6 +26,15 @@ namespace WeatherAppProject
         public MainPage()
         {
             this.InitializeComponent();
+        }
+
+        private async void WeatherButton_Click(object sender, RoutedEventArgs e)
+        {
+            GeolookupRootObject myWeather = await WeatherFacade.GetWeatherLatlon(66.6, 55.5);
+
+            WeatherResultText.Text = myWeather.location.city + " -- " + myWeather.location.country_name;
+
+
         }
     }
 }

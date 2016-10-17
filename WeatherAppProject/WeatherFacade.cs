@@ -15,7 +15,7 @@ namespace WeatherAppProject
         public async static Task<GeolookupRootObject> GetWeatherLatlon(double lat, double lon)
         {
             var http = new HttpClient();
-            var response = await http.GetAsync("http://api.wunderground.com/api/817ffb35035be408/geolookup/q/37.776289,-122.395234.json");
+            var response = await http.GetAsync("http://api.wunderground.com/api/817ffb35035be408/geolookup/q/53.28653757012604,-9.041748044375026.json");
             var jsonMessage = await response.Content.ReadAsStringAsync();
             var serializer = new DataContractJsonSerializer(typeof(GeolookupRootObject));
 

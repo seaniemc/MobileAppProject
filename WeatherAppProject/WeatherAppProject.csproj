@@ -104,6 +104,7 @@
     <Compile Include="Model\GeolookupRootObject.cs" />
     <Compile Include="Model\WebcamRootObj.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WeatherFacade.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
