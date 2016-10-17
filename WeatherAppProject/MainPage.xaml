@@ -13,6 +13,11 @@
             </Button>
             <TextBlock Name="WeatherResultText"></TextBlock>
         </StackPanel>
+        <StackPanel HorizontalAlignment="Right">
+            <Button Name="WeatherCityButton" Content="Lets Get the city Weather" Click="WeatherCityButton_Click">
+            </Button>
+            <TextBlock Name="WeatherCityResultText"></TextBlock>
+        </StackPanel>
 
     </Grid>
 </Page>

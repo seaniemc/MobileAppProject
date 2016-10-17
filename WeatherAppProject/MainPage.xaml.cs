@@ -34,6 +34,14 @@ namespace WeatherAppProject
 
             WeatherResultText.Text = myWeather.location.city + " -- " + myWeather.location.country_name;
 
+        }
+
+        private async void WeatherCityButton_Click(object sender, RoutedEventArgs e)
+        {
+            ConditionsRootObject myCityWeather = await WeatherFacade.GetWeatherCity("galway");
+
+            WeatherCityResultText.Text = myCityWeather.current_observation.display_location.city + " _  " + myCityWeather.current_observation.temp_c.ToString()  + "-" + myCityWeather.current_observation.wind_kph;
+
 
         }
     }

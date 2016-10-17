@@ -30,7 +30,7 @@ namespace WeatherAppProject
         public async static Task<ConditionsRootObject> GetWeatherCity(string city)
         {
             var http = new HttpClient();
-            var response = await http.GetAsync("http://api.wunderground.com/api/817ffb35035be408/conditions/q/CA/San_Francisco.json");
+            var response = await http.GetAsync("http://api.wunderground.com/api/817ffb35035be408/conditions/q/IE/Galway.json");
             var jsonMessage = await response.Content.ReadAsStringAsync();
             var serializer = new DataContractJsonSerializer(typeof(ConditionsRootObject));
 

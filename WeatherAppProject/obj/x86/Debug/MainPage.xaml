@@ -9,9 +9,14 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel HorizontalAlignment="Left">
-            <Button x:ConnectionId='1' Name="WeatherButton" Content="Lets Get the Weather"                            >
+            <Button x:ConnectionId='3' Name="WeatherButton" Content="Lets Get the Weather"                            >
             </Button>
-            <TextBlock x:ConnectionId='2' Name="WeatherResultText"></TextBlock>
+            <TextBlock x:ConnectionId='4' Name="WeatherResultText"></TextBlock>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Right">
+            <Button x:ConnectionId='1' Name="WeatherCityButton" Content="Lets Get the city Weather"                                >
+            </Button>
+            <TextBlock x:ConnectionId='2' Name="WeatherCityResultText"></TextBlock>
         </StackPanel>
 
     </Grid>
