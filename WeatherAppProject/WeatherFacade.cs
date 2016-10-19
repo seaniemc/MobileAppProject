@@ -12,31 +12,31 @@ namespace WeatherAppProject
 {
     public class WeatherFacade
     {
-        public async static Task<GeolookupRootObject> GetWeatherLatlon(double lat, double lon)
+        public async static Task<RootObject> GetWeatherLatlon(double lat, double lon)
         {
             var http = new HttpClient();
             var response = await http.GetAsync("http://api.wunderground.com/api/817ffb35035be408/geolookup/q/53.28653757012604,-9.041748044375026.json");
             var jsonMessage = await response.Content.ReadAsStringAsync();
-            var serializer = new DataContractJsonSerializer(typeof(GeolookupRootObject));
+            var serializer = new DataContractJsonSerializer(typeof(RootObject));
 
             var ms = new MemoryStream(Encoding.UTF8.GetBytes(jsonMessage));
 
-            var result = (GeolookupRootObject)serializer.ReadObject(ms);
+            var result = (RootObject)serializer.ReadObject(ms);
 
             return result;
 
         }
 
-        public async static Task<ConditionsRootObject> GetWeatherCity(string city)
+        public async static Task<RootObject> GetWeatherCity(string city)
         {
             var http = new HttpClient();
             var response = await http.GetAsync("http://api.wunderground.com/api/817ffb35035be408/conditions/q/IE/Galway.json");
             var jsonMessage = await response.Content.ReadAsStringAsync();
-            var serializer = new DataContractJsonSerializer(typeof(ConditionsRootObject));
+            var serializer = new DataContractJsonSerializer(typeof(RootObject));
 
             var ms = new MemoryStream(Encoding.UTF8.GetBytes(jsonMessage));
 
-            var cityresult = (ConditionsRootObject)serializer.ReadObject(ms);
+            var cityresult = (RootObject)serializer.ReadObject(ms);
 
             return cityresult;
 
@@ -44,5 +44,5 @@ namespace WeatherAppProject
 
     }
 
-    
+
 }
