@@ -30,7 +30,7 @@ namespace WeatherAppProject
 
         private async void WeatherButton_Click(object sender, RoutedEventArgs e)
         {
-            GeolookupRootObject myWeather = await WeatherFacade.GetWeatherLatlon(66.6, 55.5);
+            RootObject myWeather = await WeatherFacade.GetWeatherLatlon(66.6, 55.5);
 
             WeatherResultText.Text = myWeather.location.city + " -- " + myWeather.location.country_name;
 
@@ -38,9 +38,9 @@ namespace WeatherAppProject
 
         private async void WeatherCityButton_Click(object sender, RoutedEventArgs e)
         {
-            ConditionsRootObject myCityWeather = await WeatherFacade.GetWeatherCity("galway");
+            RootObject myCityWeather = await WeatherFacade.GetWeatherCity("galway");
 
-            WeatherCityResultText.Text = myCityWeather.current_observation.display_location.city + " _  " + myCityWeather.current_observation.temp_c.ToString()  + "-" + myCityWeather.current_observation.wind_kph;
+            WeatherCityResultText.Text = myCityWeather.current_observation.display_location.city + " _  " + myCityWeather.current_observation.temp_c.ToString() + "-" + myCityWeather.current_observation.wind_kph;
 
 
         }
