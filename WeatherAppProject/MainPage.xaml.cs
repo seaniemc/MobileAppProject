@@ -30,9 +30,11 @@ namespace WeatherAppProject
 
         private async void WeatherButton_Click(object sender, RoutedEventArgs e)
         {
-            OpenWeatherRootObject myWeather = await WeatherFacade.GetWeatherLatlon();
+            var position = await LocationManager.GetPosition();
 
-            WeatherResultText.Text = myWeather.main.temp + " -- " + myWeather.weather[0].description;
+            OpenWeatherRootObject myWeather = await WeatherFacade.GetWeatherLatlon(position.Coordinate.Latitude, position.Coordinate.Longitude);
+
+            WeatherResultText.Text = myWeather.name.ToString() + " -- " + myWeather.weather[0].description;
                 
         }
 
@@ -41,7 +43,6 @@ namespace WeatherAppProject
             RootObject myCityWeather = await WeatherFacade.GetWeatherCity();
 
             WeatherCityResultText.Text = myCityWeather.current_observation.display_location.city + " _  " + myCityWeather.current_observation.temp_c.ToString() + "-" + myCityWeather.current_observation.wind_kph;
-
 
         }
     }

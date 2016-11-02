@@ -16,7 +16,7 @@
     <PackageRegistrationPath>
     </PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
-    <RegisteredManifestChecksum>E08CEFE10A3E4A89E29E7BB6A856B628FEA97233604EA28344F05C86868A325B</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>63C23D5FEA103E93121D30632EE5A2A64DA956B982F4731621BB96390F0B3FE5</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>02f7e73c-4141-4831-a54f-1288b9e21591_1.0.0.0_x86__e0gb3t4ba2k4g</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>02f7e73c-4141-4831-a54f-1288b9e21591_e0gb3t4ba2k4g!App</RegisteredUserModeAppID>
     <RegisteredPackageID>02f7e73c-4141-4831-a54f-1288b9e21591</RegisteredPackageID>
@@ -28,13 +28,13 @@
     <AppXManifest Include="C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-11-02T15:16:09.740</Modified>
+      <Modified>2016-11-02T20:35:35.305</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\bin\x86\Debug\WeatherAppProject.exe">
       <PackagePath>entrypoint\WeatherAppProject.exe</PackagePath>
-      <Modified>2016-11-02T15:16:09.330</Modified>
+      <Modified>2016-11-02T20:35:34.847</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Sean\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -505,11 +505,11 @@
     <AppxPackagedFile Include="C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-11-02T14:45:35.122</Modified>
+      <Modified>2016-11-02T20:31:42.391</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\bin\x86\Debug\Core\WeatherAppProject.exe">
       <PackagePath>WeatherAppProject.exe</PackagePath>
-      <Modified>2016-11-02T15:16:09.734</Modified>
+      <Modified>2016-11-02T20:35:35.298</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

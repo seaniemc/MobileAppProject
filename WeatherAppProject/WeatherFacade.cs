@@ -26,10 +26,11 @@ namespace WeatherAppProject
         //    }
         //}
 
-        public async static Task<OpenWeatherRootObject> GetWeatherLatlon()
+        public async static Task<OpenWeatherRootObject> GetWeatherLatlon(double lat, double lon)
         {
             var http = new HttpClient();
-            var response = await http.GetAsync("http://api.openweathermap.org/data/2.5/weather?lat=53.28653757012604&lon=-9.041748044375026&appid=cdfbbb0c252cbc6513da824fcdaedca1");
+            var url = String.Format("http://api.openweathermap.org/data/2.5/weather?lat={0}&lon={1}&appid=cdfbbb0c252cbc6513da824fcdaedca1", lat, lon);
+            var response = await http.GetAsync(url);
             var jsonMessage = await response.Content.ReadAsStringAsync();
             var serializer = new DataContractJsonSerializer(typeof(OpenWeatherRootObject));
 
