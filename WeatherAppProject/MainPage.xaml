@@ -17,6 +17,12 @@
             <Button Name="WeatherCityButton" Content="Lets Get the city Weather" Click="WeatherCityButton_Click">
             </Button>
             <TextBlock Name="WeatherCityResultText"></TextBlock>
+            <StackPanel HorizontalAlignment="Right">
+                <ComboBox Name="CountryCodeCombo" DataContext="Select Country">
+                    <ComboBoxItem Name="cc1" Content="Ireland"></ComboBoxItem>
+                </ComboBox>
+                
+            </StackPanel>
         </StackPanel>
 
     </Grid>

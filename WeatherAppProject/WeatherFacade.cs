@@ -14,11 +14,11 @@ namespace WeatherAppProject
     public class WeatherFacade
     {
 
-        //public static async Task PopulateWeatherData(ObservableCollection<RootObject> weatherData)
+        //public static async Task PopulateWeatherData(ObservableCollection<TxtForecast> weatherData)
         //{
-        //    var getWheatherLatLon = await GetWeatherLatlon();
+        //    var getWheatherLatLon = await GetWeatherCity();
 
-        //    var weatherLatLon = getWheatherLatLon.webcams;
+        //    var weatherLatLon = getWheatherLatLon.forecast.simpleforecast.forecastday;
 
         //    foreach (var weather in weatherLatLon)
         //    {
