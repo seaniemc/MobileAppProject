@@ -14,7 +14,7 @@ namespace WeatherAppProject
     public class WeatherFacade
     {
 
-        //public static async Task PopulateWeatherData(ObservableCollection<TxtForecast> weatherData)
+        //public static async Task PopulateWeatherData(ObservableCollection<Features> weatherData)
         //{
         //    var getWheatherLatLon = await GetWeatherCity();
 

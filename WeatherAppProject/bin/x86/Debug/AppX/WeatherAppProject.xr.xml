@@ -25,13 +25,13 @@
       <RootProperty Name="Name" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Width" />
+      <RootProperty Name="Name" />
+      <RootProperty Name="DataContext" />
+      <RootProperty Name="Items" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.ListBox">
-      <RootProperty Name="Height" />
-      <RootProperty Name="Width" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ComboBoxItem">
+      <RootProperty Name="Name" />
+      <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="WeatherAppProject.MainPage" />
   </Roots.RootTypes>
