@@ -18,10 +18,59 @@
             </Button>
             <TextBlock Name="WeatherCityResultText"></TextBlock>
             <StackPanel HorizontalAlignment="Right">
-                <ComboBox Name="CountryCodeCombo" DataContext="Select Country">
-                    <ComboBoxItem Name="cc1" Content="Ireland"></ComboBoxItem>
+                <ComboBox Name="CountryCodeCombo" Tapped="CountryCodeCombo_Tapped">
+                    <ComboBoxItem Name="CC1" DataContext="IE" Content="Ireland"></ComboBoxItem>
+                    <ComboBoxItem Name="CC2" DataContext="AL" Content="Albania"></ComboBoxItem>
+                    <ComboBoxItem Name="CC3" DataContext="AD" Content="Andorra"></ComboBoxItem>
+                    <ComboBoxItem Name="CC4" DataContext="AT" Content="Austria"></ComboBoxItem>
+                    <ComboBoxItem Name="CC5" DataContext="BY" Content="Belarus"></ComboBoxItem>
+                    <ComboBoxItem Name="CC6" DataContext="BE" Content="Belgium"></ComboBoxItem>
+                    <ComboBoxItem Name="CC7" DataContext="BA" Content="Bosnia and Herzegovina"></ComboBoxItem>
+                    <ComboBoxItem Name="CC8" DataContext="BG" Content="Bulgaria"></ComboBoxItem>
+                    <ComboBoxItem Name="CC9" DataContext="HR" Content="Croatia"></ComboBoxItem>
+                    <ComboBoxItem Name="CC10" DataContext="CY" Content="Cyprus"></ComboBoxItem>
+                    <ComboBoxItem Name="CC11" DataContext="CZ" Content="Czech Republic"></ComboBoxItem>
+                    <ComboBoxItem Name="CC12" DataContext="DK" Content="Denmark"></ComboBoxItem>
+                    <ComboBoxItem Name="CC13" DataContext="EE" Content="Estonia"></ComboBoxItem>
+                    <ComboBoxItem Name="CC14" DataContext="FO" Content="Faroe Islands"></ComboBoxItem>
+                    <ComboBoxItem Name="CC15" DataContext="FI" Content="Finland"></ComboBoxItem>
+                    <ComboBoxItem Name="CC16" DataContext="FR" Content="France"></ComboBoxItem>
+                    <ComboBoxItem Name="CC17" DataContext="DE" Content="Germany"></ComboBoxItem>
+                    <ComboBoxItem Name="CC18" DataContext="GI" Content="Gibraltar"></ComboBoxItem>
+                    <ComboBoxItem Name="CC19" DataContext="GR" Content="Greece"></ComboBoxItem>
+                    <ComboBoxItem Name="CC20" DataContext="HU" Content="Hungary"></ComboBoxItem>
+                    <ComboBoxItem Name="CC21" DataContext="IS" Content="Iceland"></ComboBoxItem>
+                    <ComboBoxItem Name="CC22" DataContext="IM" Content="Isle of Man"></ComboBoxItem>
+                    <ComboBoxItem Name="CC23" DataContext="IT" Content="Italy"></ComboBoxItem>
+                    <ComboBoxItem Name="CC24" DataContext="RS" Content="Kosovo"></ComboBoxItem>
+                    <ComboBoxItem Name="CC25" DataContext="LV" Content="Latvia"></ComboBoxItem>
+                    <ComboBoxItem Name="CC26" DataContext="LI" Content="Liechtenstein"></ComboBoxItem>
+                    <ComboBoxItem Name="CC27" DataContext="LT" Content="Lithuania"></ComboBoxItem>
+                    <ComboBoxItem Name="CC28" DataContext="LU" Content="Luxembourg"></ComboBoxItem>
+                    <ComboBoxItem Name="CC29" DataContext="MK" Content="Macedonia"></ComboBoxItem>
+                    <ComboBoxItem Name="CC30" DataContext="MT" Content="Malta"></ComboBoxItem>
+                    <ComboBoxItem Name="CC31" DataContext="MD" Content="Moldova"></ComboBoxItem>
+                    <ComboBoxItem Name="CC32" DataContext="MC" Content="Monaco"></ComboBoxItem>
+                    <ComboBoxItem Name="CC33" DataContext="ME" Content="Montenegro"></ComboBoxItem>
+                    <ComboBoxItem Name="CC34" DataContext="NL" Content="Netherlands"></ComboBoxItem>
+                    <ComboBoxItem Name="CC35" DataContext="NO" Content="Norway"></ComboBoxItem>
+                    <ComboBoxItem Name="CC36" DataContext="PL" Content="Poland"></ComboBoxItem>
+                    <ComboBoxItem Name="CC37" DataContext="PT" Content="Portugal"></ComboBoxItem>
+                    <ComboBoxItem Name="CC38" DataContext="RO" Content="Romania"></ComboBoxItem>
+                    <ComboBoxItem Name="CC39" DataContext="RU" Content="Russia"></ComboBoxItem>
+                    <ComboBoxItem Name="CC40" DataContext="SM" Content="San Marino"></ComboBoxItem>
+                    <ComboBoxItem Name="CC41" DataContext="RS" Content="Serbia"></ComboBoxItem>
+                    <ComboBoxItem Name="CC42" DataContext="SK" Content="Slovakia"></ComboBoxItem>
+                    <ComboBoxItem Name="CC43" DataContext="SI" Content="Slovenia"></ComboBoxItem>
+                    <ComboBoxItem Name="CC44" DataContext="ES" Content="Spain"></ComboBoxItem>
+                    <ComboBoxItem Name="CC45" DataContext="SE" Content="Sweden"></ComboBoxItem>
+                    <ComboBoxItem Name="CC46" DataContext="CH" Content="Switzerland"></ComboBoxItem>
+                    <ComboBoxItem Name="CC47" DataContext="UA" Content="Ukraine"></ComboBoxItem>
+                    <ComboBoxItem Name="CC48" DataContext="GB" Content="United Kingdom"></ComboBoxItem>
+                    <ComboBoxItem Name="CC49" DataContext="VA" Content="Vatican city"></ComboBoxItem>
+                    <ComboBoxItem Name="CC50" DataContext="RS" Content="Yugoslavia"></ComboBoxItem>
                 </ComboBox>
-                
+                <TextBox Name="cityTextBox" Header="Enter City Location" Text=""/>
             </StackPanel>
         </StackPanel>
 

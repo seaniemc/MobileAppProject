@@ -1,4 +1,3 @@
-C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\obj\x86\Debug\WeatherAppProject.csprojResolveAssemblyReference.cache
 C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\obj\x86\Debug\App.g.i.cs
 C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\obj\x86\Debug\App.g.cs
 C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\obj\x86\Debug\MainPage.g.i.cs
@@ -193,3 +192,4 @@ C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherApp
 C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\obj\x86\Debug\WeatherAppProject.csprojResolveAssemblyReference.cache

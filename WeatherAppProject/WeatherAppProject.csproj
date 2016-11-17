@@ -99,6 +99,8 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\CountryApi.cs" />
+    <Compile Include="Model\CountryCodeApi.cs" />
     <Compile Include="Model\CountryCodes.cs" />
     <Compile Include="Model\OpenWeatherRootObj.cs" />
     <Compile Include="Model\RootObj.cs" />

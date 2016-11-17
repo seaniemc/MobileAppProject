@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -23,11 +24,13 @@ namespace WeatherAppProject
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        public ObservableCollection<Results> CountryResults { get; set; }
         public MainPage()
         {
             this.InitializeComponent();
+            CountryResults = new ObservableCollection<Results>();
         }
-
+        //string country;
         private async void WeatherButton_Click(object sender, RoutedEventArgs e)
         {
             var position = await LocationManager.GetPosition();
@@ -41,12 +44,21 @@ namespace WeatherAppProject
 
         private async void WeatherCityButton_Click(object sender, RoutedEventArgs e)
         {
-           // var deserializeJson = 
-            await ReadInFile.deserializeJsonAsync();
-            RootObject myCityWeather = await WeatherFacade.GetWeatherCity();
+            await ReadInFile.LoadLocalData();
 
-           WeatherCityResultText.Text = myCityWeather.current_observation.display_location.city + " _  " + myCityWeather.current_observation.temp_c.ToString() + "-" + myCityWeather.current_observation.wind_kph;
 
+            //CountryCodeRootObject myCountryCodes = await WeatherFacade.GetCountryCodes2();
+            //var city = cityTextBox.Text.ToString();
+
+            //RootObject myCityWeather = await WeatherFacade.GetWeatherCity(country, city);
+
+           //WeatherCityResultText.Text = myCityWeather.current_observation.display_location.city + " _  " + myCityWeather.current_observation.temp_c.ToString() + "-" + myCityWeather.current_observation.wind_kph;
+            
+        }
+
+        private void CountryCodeCombo_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            //country = CountryCodeCombo.DataContext.ToString();
         }
     }
 }
