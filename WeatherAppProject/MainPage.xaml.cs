@@ -58,9 +58,5 @@ namespace WeatherAppProject
             
         }
 
-        private void CountryCodeCombo_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            //country = CountryCodeCombo.DataContext.ToString();
-        }
     }
 }
