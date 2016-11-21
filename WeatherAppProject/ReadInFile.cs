@@ -10,9 +10,9 @@ namespace WeatherAppProject
 {
     class ReadInFile
     {
+        // List of country codes
         public List<CountryCodes> Contrylist { get; set; }
         public static List<CountryCodes> gCountryList = new List<CountryCodes>();
-        //public String BreedName { get; set; }
 
         public ReadInFile()
         {
@@ -32,9 +32,10 @@ namespace WeatherAppProject
             var result = await Windows.Storage.FileIO.ReadTextAsync(file);
 
             var jasonCountryList = JsonArray.Parse(result);
-            CreateDogsList(jasonCountryList);
+            CreateCountryList(jasonCountryList);
         }
-        private static void CreateDogsList(JsonArray jasonCountryList)
+
+        private static void CreateCountryList(JsonArray jasonCountryList)
         {
             foreach (var item in jasonCountryList)
             {
@@ -50,13 +51,13 @@ namespace WeatherAppProject
                     switch (key)
                     {
                         case "code":
-                            code.code= value.GetString();
+                            code.code = value.GetString();
                             break;
                         case "name":
                             code.name = value.GetString();
                             break;
                     } // end switch
-                } // end foreach(var key in oneDog.Keys )
+                } // end foreach(var key in oneCountry.Keys )
                 gCountryList.Add(code);
             } // end foreach (var item in jDogList)
         }

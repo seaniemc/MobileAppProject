@@ -28,13 +28,13 @@
     <AppXManifest Include="C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-11-17T20:04:31.473</Modified>
+      <Modified>2016-11-21T12:08:17.291</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\bin\x86\Debug\WeatherAppProject.exe">
       <PackagePath>entrypoint\WeatherAppProject.exe</PackagePath>
-      <Modified>2016-11-17T20:04:31.062</Modified>
+      <Modified>2016-11-21T11:46:49.059</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Sean\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -458,7 +458,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\Country-codes.txt">
       <PackagePath>Country-codes.txt</PackagePath>
-      <Modified>2016-11-16T11:28:17.826</Modified>
+      <Modified>2016-11-21T12:08:12.917</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\Model\Country-codes.txt">
+      <PackagePath>Model\Country-codes.txt</PackagePath>
+      <Modified>2016-11-21T11:37:38.653</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
@@ -509,11 +513,11 @@
     <AppxPackagedFile Include="C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-11-17T18:24:21.718</Modified>
+      <Modified>2016-11-21T11:25:45.863</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\bin\x86\Debug\Core\WeatherAppProject.exe">
       <PackagePath>WeatherAppProject.exe</PackagePath>
-      <Modified>2016-11-17T20:04:31.467</Modified>
+      <Modified>2016-11-21T12:08:17.285</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

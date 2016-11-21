@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Afghanistan",
+    "code": "AH"
+  },
+  {
+    "name": "Albania",
+    "code": "AB"
+  },
+  {
+    "name": "Algeria",
+    "code": "AL"
+  }
+]

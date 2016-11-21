@@ -115,7 +115,10 @@
     <None Include="WeatherAppProject_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Country-codes.txt" />
+    <Content Include="Country-codes.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Model\Country-codes.txt" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
