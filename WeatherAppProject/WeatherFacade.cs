@@ -12,16 +12,17 @@ namespace WeatherAppProject
     public class WeatherFacade
     {
 
-        //public static async Task PopulateWeatherData(ObservableCollection<Results> countryCodes)
+        //public static void PopulateWeatherData(ObservableCollection<ReadInFile> countryCodes)
         //{
-        //    var getCountryCodes = await GetCountryCodes();
+        //    var getCountryCodes = ReadInFile.loadData();
 
-        //    var codes = getCountryCodes.Results;
+        //    var codes = getCountryCodes;
 
         //    foreach (var code in codes)
         //    {
         //        countryCodes.Add(code);
         //    }
+            
         //}
 
         public async static Task<OpenWeatherRootObject> GetWeatherLatlon(double lat, double lon)

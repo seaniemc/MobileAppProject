@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Runtime.Serialization.Json;
 using System.Threading.Tasks;
@@ -8,26 +9,29 @@ using Windows.Data.Json;
 
 namespace WeatherAppProject
 {
+
     public class ReadInFile
     {
         // List of country codes
         public List<CountryCodes> Contrylist { get; set; }
-        public static List<CountryCodes> gCountryList = new List<CountryCodes>();
+        //public static List<CountryCodes> gCountryList = new List<CountryCodes>();
+        public ObservableCollection<CountryCodes> gCountryList = new ObservableCollection<CountryCodes>();
+
         public string CountryName { get; set; }
 
         public ReadInFile()
         {
             loadData();
-            Contrylist = gCountryList;
+           // Contrylist = gCountryList;
         }
 
-        public static async Task loadData()
+        public  async Task loadData()
         {
             await LoadLocalData();
 
         }
 
-        public static async Task LoadLocalData()
+        public  async Task LoadLocalData()
         {
             var file = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFileAsync("Country-codes.txt");
             var result = await Windows.Storage.FileIO.ReadTextAsync(file);
@@ -36,7 +40,7 @@ namespace WeatherAppProject
             CreateCountryList(jasonCountryList);
         }
 
-        private static void CreateCountryList(JsonArray jasonCountryList)
+        private  void CreateCountryList(JsonArray jasonCountryList)
         {
             foreach (var item in jasonCountryList)
             {
@@ -62,6 +66,17 @@ namespace WeatherAppProject
                 gCountryList.Add(code);
             } // end foreach (var item in jDogList)
         }
+        //public static void PopulateWeatherData(ObservableCollection<ReadInFile> countryCodes)
+        //{
+        //    var getCountryCodes = loadData();
 
+        //    var codes = getCountryCodes.;
+
+        //    foreach (var code in codes)
+        //    {
+        //        countryCodes.Add(code);
+        //    }
+
+        //}
     }
 }

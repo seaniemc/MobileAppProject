@@ -132,21 +132,29 @@ namespace WeatherAppProject.WeatherAppProject_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[6];
+            _typeNameTable = new string[10];
             _typeNameTable[0] = "WeatherAppProject.MainPage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "WeatherAppProject.CountryCodesViewModel.CountryCodesVM";
-            _typeNameTable[4] = "WeatherAppProject.ViewModel.NotificationBase";
+            _typeNameTable[3] = "System.Collections.ObjectModel.ObservableCollection`1<WeatherAppProject.ReadInFile>";
+            _typeNameTable[4] = "System.Collections.ObjectModel.Collection`1<WeatherAppProject.ReadInFile>";
             _typeNameTable[5] = "Object";
+            _typeNameTable[6] = "WeatherAppProject.ReadInFile";
+            _typeNameTable[7] = "System.Collections.Generic.List`1<WeatherAppProject.Model.CountryCodes>";
+            _typeNameTable[8] = "WeatherAppProject.Model.CountryCodes";
+            _typeNameTable[9] = "String";
 
-            _typeTable = new global::System.Type[6];
+            _typeTable = new global::System.Type[10];
             _typeTable[0] = typeof(global::WeatherAppProject.MainPage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::WeatherAppProject.CountryCodesViewModel.CountryCodesVM);
-            _typeTable[4] = typeof(global::WeatherAppProject.ViewModel.NotificationBase);
+            _typeTable[3] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::WeatherAppProject.ReadInFile>);
+            _typeTable[4] = typeof(global::System.Collections.ObjectModel.Collection<global::WeatherAppProject.ReadInFile>);
             _typeTable[5] = typeof(global::System.Object);
+            _typeTable[6] = typeof(global::WeatherAppProject.ReadInFile);
+            _typeTable[7] = typeof(global::System.Collections.Generic.List<global::WeatherAppProject.Model.CountryCodes>);
+            _typeTable[8] = typeof(global::WeatherAppProject.Model.CountryCodes);
+            _typeTable[9] = typeof(global::System.String);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -182,7 +190,29 @@ namespace WeatherAppProject.WeatherAppProject_XamlTypeInfo
         }
 
         private object Activate_0_MainPage() { return new global::WeatherAppProject.MainPage(); }
-        private object Activate_4_NotificationBase() { return new global::WeatherAppProject.ViewModel.NotificationBase(); }
+        private object Activate_3_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::WeatherAppProject.ReadInFile>(); }
+        private object Activate_4_Collection() { return new global::System.Collections.ObjectModel.Collection<global::WeatherAppProject.ReadInFile>(); }
+        private object Activate_6_ReadInFile() { return new global::WeatherAppProject.ReadInFile(); }
+        private object Activate_7_List() { return new global::System.Collections.Generic.List<global::WeatherAppProject.Model.CountryCodes>(); }
+        private object Activate_8_CountryCodes() { return new global::WeatherAppProject.Model.CountryCodes(); }
+        private void VectorAdd_3_ObservableCollection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::WeatherAppProject.ReadInFile>)instance;
+            var newItem = (global::WeatherAppProject.ReadInFile)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_4_Collection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::WeatherAppProject.ReadInFile>)instance;
+            var newItem = (global::WeatherAppProject.ReadInFile)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_7_List(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::WeatherAppProject.Model.CountryCodes>)instance;
+            var newItem = (global::WeatherAppProject.Model.CountryCodes)item;
+            collection.Add(newItem);
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -197,7 +227,7 @@ namespace WeatherAppProject.WeatherAppProject_XamlTypeInfo
             case 0:   //  WeatherAppProject.MainPage
                 userType = new global::WeatherAppProject.WeatherAppProject_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_0_MainPage;
-                userType.AddMemberName("ReadInFile");
+                userType.AddMemberName("CountryCodes");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -210,21 +240,50 @@ namespace WeatherAppProject.WeatherAppProject_XamlTypeInfo
                 xamlType = new global::WeatherAppProject.WeatherAppProject_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 3:   //  WeatherAppProject.CountryCodesViewModel.CountryCodesVM
-                userType = new global::WeatherAppProject.WeatherAppProject_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("WeatherAppProject.ViewModel.NotificationBase"));
+            case 3:   //  System.Collections.ObjectModel.ObservableCollection`1<WeatherAppProject.ReadInFile>
+                userType = new global::WeatherAppProject.WeatherAppProject_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<WeatherAppProject.ReadInFile>"));
+                userType.CollectionAdd = VectorAdd_3_ObservableCollection;
                 userType.SetIsReturnTypeStub();
-                userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 4:   //  WeatherAppProject.ViewModel.NotificationBase
+            case 4:   //  System.Collections.ObjectModel.Collection`1<WeatherAppProject.ReadInFile>
                 userType = new global::WeatherAppProject.WeatherAppProject_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_4_NotificationBase;
-                userType.SetIsLocalType();
+                userType.Activator = Activate_4_Collection;
+                userType.CollectionAdd = VectorAdd_4_Collection;
                 xamlType = userType;
                 break;
 
             case 5:   //  Object
+                xamlType = new global::WeatherAppProject.WeatherAppProject_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 6:   //  WeatherAppProject.ReadInFile
+                userType = new global::WeatherAppProject.WeatherAppProject_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_6_ReadInFile;
+                userType.AddMemberName("Contrylist");
+                userType.AddMemberName("CountryName");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 7:   //  System.Collections.Generic.List`1<WeatherAppProject.Model.CountryCodes>
+                userType = new global::WeatherAppProject.WeatherAppProject_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.CollectionAdd = VectorAdd_7_List;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 8:   //  WeatherAppProject.Model.CountryCodes
+                userType = new global::WeatherAppProject.WeatherAppProject_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_8_CountryCodes;
+                userType.AddMemberName("code");
+                userType.AddMemberName("name");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 9:   //  String
                 xamlType = new global::WeatherAppProject.WeatherAppProject_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }
@@ -232,15 +291,55 @@ namespace WeatherAppProject.WeatherAppProject_XamlTypeInfo
         }
 
 
-        private object get_0_MainPage_ReadInFile(object instance)
+        private object get_0_MainPage_CountryCodes(object instance)
         {
             var that = (global::WeatherAppProject.MainPage)instance;
-            return that.ReadInFile;
+            return that.CountryCodes;
         }
-        private void set_0_MainPage_ReadInFile(object instance, object Value)
+        private void set_0_MainPage_CountryCodes(object instance, object Value)
         {
             var that = (global::WeatherAppProject.MainPage)instance;
-            that.ReadInFile = (global::WeatherAppProject.CountryCodesViewModel.CountryCodesVM)Value;
+            that.CountryCodes = (global::System.Collections.ObjectModel.ObservableCollection<global::WeatherAppProject.ReadInFile>)Value;
+        }
+        private object get_1_ReadInFile_Contrylist(object instance)
+        {
+            var that = (global::WeatherAppProject.ReadInFile)instance;
+            return that.Contrylist;
+        }
+        private void set_1_ReadInFile_Contrylist(object instance, object Value)
+        {
+            var that = (global::WeatherAppProject.ReadInFile)instance;
+            that.Contrylist = (global::System.Collections.Generic.List<global::WeatherAppProject.Model.CountryCodes>)Value;
+        }
+        private object get_2_CountryCodes_code(object instance)
+        {
+            var that = (global::WeatherAppProject.Model.CountryCodes)instance;
+            return that.code;
+        }
+        private void set_2_CountryCodes_code(object instance, object Value)
+        {
+            var that = (global::WeatherAppProject.Model.CountryCodes)instance;
+            that.code = (global::System.String)Value;
+        }
+        private object get_3_CountryCodes_name(object instance)
+        {
+            var that = (global::WeatherAppProject.Model.CountryCodes)instance;
+            return that.name;
+        }
+        private void set_3_CountryCodes_name(object instance, object Value)
+        {
+            var that = (global::WeatherAppProject.Model.CountryCodes)instance;
+            that.name = (global::System.String)Value;
+        }
+        private object get_4_ReadInFile_CountryName(object instance)
+        {
+            var that = (global::WeatherAppProject.ReadInFile)instance;
+            return that.CountryName;
+        }
+        private void set_4_ReadInFile_CountryName(object instance, object Value)
+        {
+            var that = (global::WeatherAppProject.ReadInFile)instance;
+            that.CountryName = (global::System.String)Value;
         }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
@@ -250,11 +349,35 @@ namespace WeatherAppProject.WeatherAppProject_XamlTypeInfo
 
             switch (longMemberName)
             {
-            case "WeatherAppProject.MainPage.ReadInFile":
+            case "WeatherAppProject.MainPage.CountryCodes":
                 userType = (global::WeatherAppProject.WeatherAppProject_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WeatherAppProject.MainPage");
-                xamlMember = new global::WeatherAppProject.WeatherAppProject_XamlTypeInfo.XamlMember(this, "ReadInFile", "WeatherAppProject.CountryCodesViewModel.CountryCodesVM");
-                xamlMember.Getter = get_0_MainPage_ReadInFile;
-                xamlMember.Setter = set_0_MainPage_ReadInFile;
+                xamlMember = new global::WeatherAppProject.WeatherAppProject_XamlTypeInfo.XamlMember(this, "CountryCodes", "System.Collections.ObjectModel.ObservableCollection`1<WeatherAppProject.ReadInFile>");
+                xamlMember.Getter = get_0_MainPage_CountryCodes;
+                xamlMember.Setter = set_0_MainPage_CountryCodes;
+                break;
+            case "WeatherAppProject.ReadInFile.Contrylist":
+                userType = (global::WeatherAppProject.WeatherAppProject_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WeatherAppProject.ReadInFile");
+                xamlMember = new global::WeatherAppProject.WeatherAppProject_XamlTypeInfo.XamlMember(this, "Contrylist", "System.Collections.Generic.List`1<WeatherAppProject.Model.CountryCodes>");
+                xamlMember.Getter = get_1_ReadInFile_Contrylist;
+                xamlMember.Setter = set_1_ReadInFile_Contrylist;
+                break;
+            case "WeatherAppProject.Model.CountryCodes.code":
+                userType = (global::WeatherAppProject.WeatherAppProject_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WeatherAppProject.Model.CountryCodes");
+                xamlMember = new global::WeatherAppProject.WeatherAppProject_XamlTypeInfo.XamlMember(this, "code", "String");
+                xamlMember.Getter = get_2_CountryCodes_code;
+                xamlMember.Setter = set_2_CountryCodes_code;
+                break;
+            case "WeatherAppProject.Model.CountryCodes.name":
+                userType = (global::WeatherAppProject.WeatherAppProject_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WeatherAppProject.Model.CountryCodes");
+                xamlMember = new global::WeatherAppProject.WeatherAppProject_XamlTypeInfo.XamlMember(this, "name", "String");
+                xamlMember.Getter = get_3_CountryCodes_name;
+                xamlMember.Setter = set_3_CountryCodes_name;
+                break;
+            case "WeatherAppProject.ReadInFile.CountryName":
+                userType = (global::WeatherAppProject.WeatherAppProject_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WeatherAppProject.ReadInFile");
+                xamlMember = new global::WeatherAppProject.WeatherAppProject_XamlTypeInfo.XamlMember(this, "CountryName", "String");
+                xamlMember.Getter = get_4_ReadInFile_CountryName;
+                xamlMember.Setter = set_4_ReadInFile_CountryName;
                 break;
             }
             return xamlMember;

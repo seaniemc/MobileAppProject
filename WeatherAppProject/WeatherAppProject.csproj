@@ -95,9 +95,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Convertors\ObjectsExsistToVisible.cs" />
-    <Compile Include="ViewModel\CodesViewModel.cs" />
-    <Compile Include="ViewModel\CountryCodesVM.cs" />
     <Compile Include="LocationManager.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -107,7 +104,6 @@
     <Compile Include="Model\RootObj.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReadInFile.cs" />
-    <Compile Include="ViewModel\ViewModelHelper.cs" />
     <Compile Include="WeatherFacade.cs" />
   </ItemGroup>
   <ItemGroup>
