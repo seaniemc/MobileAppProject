@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using WeatherAppProject.CountryCodesViewModel;
 using WeatherAppProject.Model;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -24,13 +25,14 @@ namespace WeatherAppProject
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        //public ObservableCollection<Results> CountryResults { get; set; }
         public MainPage()
         {
             this.InitializeComponent();
-            //CountryResults = new ObservableCollection<Results>();
+            ReadInFile = new CountryCodesVM("CountryCodes");
         }
-        //string country;
+
+        public CountryCodesVM ReadInFile { get; set; }
+
         private async void WeatherButton_Click(object sender, RoutedEventArgs e)
         {
             var position = await LocationManager.GetPosition();
@@ -44,7 +46,7 @@ namespace WeatherAppProject
 
         private async void WeatherCityButton_Click(object sender, RoutedEventArgs e)
         {
-            await ReadInFile.LoadLocalData();
+            await WeatherAppProject.ReadInFile.LoadLocalData();
 
 
             //CountryCodeRootObject myCountryCodes = await WeatherFacade.GetCountryCodes2();

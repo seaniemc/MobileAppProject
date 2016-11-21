@@ -8,11 +8,12 @@ using Windows.Data.Json;
 
 namespace WeatherAppProject
 {
-    class ReadInFile
+    public class ReadInFile
     {
         // List of country codes
         public List<CountryCodes> Contrylist { get; set; }
         public static List<CountryCodes> gCountryList = new List<CountryCodes>();
+        public string CountryName { get; set; }
 
         public ReadInFile()
         {
