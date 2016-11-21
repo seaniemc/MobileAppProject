@@ -24,11 +24,11 @@ namespace WeatherAppProject
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        public ObservableCollection<Results> CountryResults { get; set; }
+        //public ObservableCollection<Results> CountryResults { get; set; }
         public MainPage()
         {
             this.InitializeComponent();
-            CountryResults = new ObservableCollection<Results>();
+            //CountryResults = new ObservableCollection<Results>();
         }
         //string country;
         private async void WeatherButton_Click(object sender, RoutedEventArgs e)

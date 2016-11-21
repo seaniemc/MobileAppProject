@@ -28,7 +28,7 @@ namespace WeatherAppProject
 
         public static async Task LoadLocalData()
         {
-            var file = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFileAsync("Country-codes.txt");
+            var file = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFileAsync("Model\\Country-codes.txt");
             var result = await Windows.Storage.FileIO.ReadTextAsync(file);
 
             var jasonCountryList = JsonArray.Parse(result);
@@ -62,25 +62,5 @@ namespace WeatherAppProject
             } // end foreach (var item in jDogList)
         }
 
-        //public async static  Task deserializeJsonAsync()
-        //{
-        //    string content = String.Empty;
-
-        //    List<CountryCodes> myCodes;
-
-        //    var jsonSerializer = new DataContractJsonSerializer(typeof(List<CountryCodes>));
-
-        //    var myStream = await Windows.Storage.ApplicationData.Current.LocalFolder.OpenStreamForReadAsync("Country-codes.txt");
-
-
-        //    myCodes = (List<CountryCodes>)jsonSerializer.ReadObject(myStream);
-
-        //    foreach(var code in myCodes)
-        //    {
-        //        content += String.Format("Name: {0}, Code: {1}", code.name, code.code);
-        //    }
-
-
-        //}
     }
 }

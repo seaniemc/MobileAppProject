@@ -56,38 +56,6 @@ namespace WeatherAppProject
 
         }
 
-        public async static Task<CountryRootObject> GetCountryCodes()
-        {
-            var http = new HttpClient();
-           // var url = String.Format("https://restcountries.eu/rest/v1/all");
-            var response = await http.GetAsync("http://www.geognos.com/api/en/countries/info/all.json");
-            var jsonMessage = await response.Content.ReadAsStringAsync();
-            var serializer = new DataContractJsonSerializer(typeof(CountryRootObject));
-
-            var ms = new MemoryStream(Encoding.UTF8.GetBytes(jsonMessage));
-
-            var countryCodeResult = (CountryRootObject)serializer.ReadObject(ms);
-
-            return countryCodeResult;
-
-        }
-
-        public async static Task<CountryCodeRootObject> GetCountryCodes2()
-        {
-            var http = new HttpClient();
-            // var url = String.Format("https://restcountries.eu/rest/v1/all");
-            var response = await http.GetAsync("https://restcountries.eu/rest/v1/capital/tallinn");
-            var jsonMessage = await response.Content.ReadAsStringAsync();
-            var serializer = new DataContractJsonSerializer(typeof(CountryCodeRootObject));
-
-            var ms = new MemoryStream(Encoding.UTF8.GetBytes(jsonMessage));
-
-            var countryCodeResult = (CountryCodeRootObject)serializer.ReadObject(ms);
-
-            return countryCodeResult;
-
-        }
-
     }
 
 
