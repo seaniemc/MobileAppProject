@@ -22,5 +22,10 @@ namespace WeatherAppProject.ViewModel
             get { return This.code; }
             set { SetProperty(This.code, value, () => This.code = value); }
         }
+
+        public static explicit operator CodesViewModel(int v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

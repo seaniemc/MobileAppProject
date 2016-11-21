@@ -44,7 +44,7 @@ namespace WeatherAppProject.CountryCodesViewModel
         }
 
         int _SelectedIndex;
-       //private PropertyChangedEventHandler //Dogs_OnNotifyPropertyChanged;
+        //private PropertyChangedEventHandler //Dogs_OnNotifyPropertyChanged;
 
         //public int SelectedIndex
         //{
@@ -60,7 +60,7 @@ namespace WeatherAppProject.CountryCodesViewModel
 
         //public CodesViewModel SelectedCode
         //{
-        //    get { return (CountryCodesViewModel) (_SelectedIndex >= 0) ? _CountryCodes[_SelectedIndex] : null; }
+        //    get { return (_SelectedIndex >= 0) ? _CountryCodes[_SelectedIndex] : null; }
         //}
 
     }

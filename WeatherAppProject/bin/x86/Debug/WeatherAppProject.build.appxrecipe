@@ -340,6 +340,9 @@
     <AppxPackagedFile Include="C:\Users\Sean\.nuget\packages\System.Xml.XmlSerializer\4.0.10\lib\netcore50\System.Xml.XmlSerializer.dll">
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\Country-codes.txt">
+      <PackagePath>Country-codes.txt</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\Model\Country-codes.txt">
       <PackagePath>Model\Country-codes.txt</PackagePath>
     </AppxPackagedFile>
