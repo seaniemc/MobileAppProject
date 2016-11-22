@@ -9,9 +9,9 @@
     xmlns:convertors="using:WeatherAppProject.Convertors"
     mc:Ignorable="d">
 
-    <Page.Resources>
+<!--<Page.Resources>
         <convertors:ObjectsExsistToVisible x:Key="ObjectsExsistToVisible"/>
-    </Page.Resources>
+    </Page.Resources-->
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel HorizontalAlignment="Left">
@@ -31,8 +31,8 @@
               SelectedIndex="{x:Bind ReadInFile.SelectedIndex}"
               MinWidth="250" Margin="5" Opacity="0.65">
                 <ListView.ItemTemplate>
-                    <DataTemplate x:DataType="viewmodel:CountryCodesVM" >
-                        <TextBlock Text="{x:Bind ReadInFile, Mode=OneWay}" />
+                    <DataTemplate x:DataType="viewmodel:CodesViewModel" >
+                        <ComboBox DataContext="{x:Bind Name, Mode=OneWay}" />
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>

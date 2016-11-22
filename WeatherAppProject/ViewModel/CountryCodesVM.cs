@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using WeatherAppProject.Model;
 using WeatherAppProject.ViewModel;
 
-namespace WeatherAppProject.CountryCodesViewModel
+namespace WeatherAppProject.ViewModel
 {
     public class CountryCodesVM : NotificationBase
     {
@@ -20,7 +20,7 @@ namespace WeatherAppProject.CountryCodesViewModel
             // Load the database
             foreach (var codes in readFile.Contrylist)
             {
-                var np = new CountryCodesVM(codes);
+                var np = new CodesViewModel(codes);
                 //np.PropertyChanged += Dogs_OnNotifyPropertyChanged;
                 _CountryCodes.Add(np);
             }
@@ -33,11 +33,11 @@ namespace WeatherAppProject.CountryCodesViewModel
             this.codes = codes;
         }
 
-        ObservableCollection<CountryCodesVM> _CountryCodes
-          = new ObservableCollection<CountryCodesVM>();
+        ObservableCollection<CodesViewModel> _CountryCodes
+          = new ObservableCollection<CodesViewModel>();
         
 
-        public ObservableCollection<CountryCodesVM> CountryCodes
+        public ObservableCollection<CodesViewModel> CountryCodes
         {
             get { return _CountryCodes; }
             set { SetProperty(ref _CountryCodes, value); }
@@ -46,22 +46,22 @@ namespace WeatherAppProject.CountryCodesViewModel
         int _SelectedIndex;
         //private PropertyChangedEventHandler //Dogs_OnNotifyPropertyChanged;
 
-        //public int SelectedIndex
-        //{
-        //    get { return _SelectedIndex; }
-        //    set
-        //    {
-        //        if (SetProperty(ref _SelectedIndex, value))
-        //        {
-        //            RaisePropertyChanged(nameof(SelectedCode));
-        //        }
-        //    }
-        //}
+        public int SelectedIndex
+        {
+            get { return _SelectedIndex; }
+            set
+            {
+                if (SetProperty(ref _SelectedIndex, value))
+                {
+                    RaisePropertyChanged(nameof(SelectedCode));
+                }
+            }
+        }
 
-        //public CodesViewModel SelectedCode
-        //{
-        //    get { return (_SelectedIndex >= 0) ? _CountryCodes[_SelectedIndex] : null; }
-        //}
+        public CodesViewModel SelectedCode
+        {
+            get { return (_SelectedIndex >= 0) ? _CountryCodes[_SelectedIndex] : null; }
+        }
 
     }
 }

@@ -28,13 +28,13 @@
     <AppXManifest Include="C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-11-21T16:46:20.841</Modified>
+      <Modified>2016-11-22T09:56:08.280</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\bin\x86\Debug\WeatherAppProject.exe">
       <PackagePath>entrypoint\WeatherAppProject.exe</PackagePath>
-      <Modified>2016-11-21T16:46:20.327</Modified>
+      <Modified>2016-11-22T09:56:07.323</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Sean\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -504,7 +504,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\bin\x86\Debug\WeatherAppProject.xr.xml">
       <PackagePath>WeatherAppProject.xr.xml</PackagePath>
-      <Modified>2016-11-15T21:33:31.179</Modified>
+      <Modified>2016-11-22T09:56:06.997</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -513,11 +513,11 @@
     <AppxPackagedFile Include="C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-11-21T16:44:36.071</Modified>
+      <Modified>2016-11-22T09:56:08.051</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\bin\x86\Debug\Core\WeatherAppProject.exe">
       <PackagePath>WeatherAppProject.exe</PackagePath>
-      <Modified>2016-11-21T16:46:20.835</Modified>
+      <Modified>2016-11-22T09:56:08.274</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
