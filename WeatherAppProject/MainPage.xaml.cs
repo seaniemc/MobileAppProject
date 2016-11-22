@@ -33,6 +33,7 @@ namespace WeatherAppProject
 
         public CountryCodesVM ReadInFile { get; set; }
 
+
         private async void WeatherButton_Click(object sender, RoutedEventArgs e)
         {
             var position = await LocationManager.GetPosition();
@@ -46,17 +47,20 @@ namespace WeatherAppProject
 
         private async void WeatherCityButton_Click(object sender, RoutedEventArgs e)
         {
-            await WeatherAppProject.ReadInFile.LoadLocalData();
+            var city = CityTextBox.Text.ToString();
+            var country = countryCombo.SelectedValue.ToString();
 
+            RootObject myCityWeather = await WeatherFacade.GetWeatherCity(country, city);
 
-            //CountryCodeRootObject myCountryCodes = await WeatherFacade.GetCountryCodes2();
-            //var city = cityTextBox.Text.ToString();
-
-            //RootObject myCityWeather = await WeatherFacade.GetWeatherCity(country, city);
-
-           //WeatherCityResultText.Text = myCityWeather.current_observation.display_location.city + " _  " + myCityWeather.current_observation.temp_c.ToString() + "-" + myCityWeather.current_observation.wind_kph;
+            WeatherResultCityText.Text = myCityWeather.current_observation.display_location.city + " _  " + myCityWeather.current_observation.temp_c.ToString() + "-" + myCityWeather.current_observation.wind_kph;
             
         }
+
+        //public string passTheCode()
+        //{
+            
+        //    return code;
+        //}
 
     }
 }

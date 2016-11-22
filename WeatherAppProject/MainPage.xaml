@@ -23,19 +23,19 @@
         <StackPanel HorizontalAlignment="Right">
             <Button Name="WeatherCityButton" Content="Lets Get the city Weather" Click="WeatherCityButton_Click">
             </Button>
+            <TextBlock Name="WeatherResultCityText"></TextBlock>
         </StackPanel>
 
-        <StackPanel Orientation="Vertical" >
-            <ListView  x:Name="MainList" 
-              ItemsSource="{x:Bind ReadInFile.CountryCodes, Mode=OneWay}" 
-              SelectedIndex="{x:Bind ReadInFile.SelectedIndex}"
-              MinWidth="250" Margin="5" Opacity="0.65">
-                <ListView.ItemTemplate>
-                    <DataTemplate x:DataType="viewmodel:CodesViewModel" >
-                        <ComboBox DataContext="{x:Bind Name, Mode=OneWay}" />
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+        <StackPanel Margin="10,100,0,0" Orientation="Vertical" >
+            <ComboBox Name="countryCombo"
+                PlaceholderText="Select Country"
+                ItemsSource="{x:Bind ReadInFile.CountryCodes, Mode=OneWay}" 
+                SelectedIndex="{x:Bind ReadInFile.SelectedIndex}"
+                DisplayMemberPath="Name"
+                SelectedValuePath="Code"
+                MinWidth="250" Margin="5" Opacity="0.65">
+            </ComboBox>
+            <TextBox Name="CityTextBox" PlaceholderText="Enter City"/>
         </StackPanel>
 
     </Grid>
