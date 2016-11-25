@@ -1,24 +1,25 @@
-﻿<Page
+﻿<Page x:ConnectionId='1'
     x:Class="WeatherAppProject.ViewFrames.HomeFrame"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:WeatherAppProject.ViewFrames"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Loaded="Page_Loaded"
+                        
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel HorizontalAlignment="Left">
-            <Button Name="WeatherButton" Content="Lets Get the Weather" >
+            <Button x:ConnectionId='4' Name="WeatherButton" Content="Lets Get the Weather" >
             </Button>
-            <TextBlock Name="WeatherResultText"></TextBlock>
+            <TextBlock x:ConnectionId='5' Name="WeatherResultText"></TextBlock>
         </StackPanel>
 
         <StackPanel HorizontalAlignment="Right">
-            <Button Name="WeatherCityButton" Content="Lets Get the city Weather">
+            <Button x:ConnectionId='2' Name="WeatherCityButton" Content="Lets Get the city Weather">
             </Button>
-            <TextBlock Name="WeatherResultCityText"></TextBlock>
+            <TextBlock x:ConnectionId='3' Name="WeatherResultCityText"></TextBlock>
         </StackPanel>
     </Grid>
 </Page>
+

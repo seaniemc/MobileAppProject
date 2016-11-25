@@ -29,7 +29,7 @@ namespace WeatherAppProject
 
         public static async Task LoadLocalData()
         {
-            var file = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFileAsync("Model\\Country-codes.txt");
+            var file = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFileAsync("Country-codes.txt");
             var result = await Windows.Storage.FileIO.ReadTextAsync(file);
 
             var jasonCountryList = JsonArray.Parse(result);

@@ -20,34 +20,34 @@
         </Grid.RowDefinitions>
 
         <RelativePanel>
-            <Button Name="HamburgerButton" 
+            <Button x:ConnectionId='9' Name="HamburgerButton" 
                     RelativePanel.AlignLeftWithPanel="True"
                     FontFamily="Segoe MDL2 Assets"
                     FontSize="36" 
                     Content="&#xE700;" 
-                    Click="HamburgerButton_Click" />
+                                                  />
 
-            <Button Name="BackButton"
+            <Button x:ConnectionId='10' Name="BackButton"
                     RelativePanel.RightOf="HamburgerButton" 
                     FontFamily="Segoe MDl2 Assets" 
                     FontSize="36"
                     Content="&#xE0C4;" 
-                    Click="BackButton_Click"
+                                            
                      />
 
-            <TextBlock Name="TitleTextBlock"
+            <TextBlock x:ConnectionId='11' Name="TitleTextBlock"
                        RelativePanel.RightOf="BackButton"
                        FontSize="28"
                        FontWeight="Bold"
                        Margin="20,5,0,0"/>
 
-            <Button Name="SearchButton" 
+            <Button x:ConnectionId='12' Name="SearchButton" 
                     RelativePanel.AlignRightWithPanel="True"
                     FontFamily="Segoe MDL2 Assets"
                     FontSize="36" 
                     Content="&#xE1A3;" />
 
-            <TextBox Name="SearchTextBox" 
+            <TextBox x:ConnectionId='13' Name="SearchTextBox" 
                      RelativePanel.LeftOf="SearchButton" 
                      Height="48" 
                      Width="200"
@@ -55,39 +55,39 @@
                      PlaceholderText="Search" />
         </RelativePanel>
 
-        <SplitView Grid.Row="1" 
+        <SplitView x:ConnectionId='1' Grid.Row="1" 
                    Name="MySplitView"
                    DisplayMode="CompactOverlay" 
                    OpenPaneLength="200" 
                    CompactPaneLength="56">
             <SplitView.Pane>
-                <ListBox SelectionMode="Single" 
-                         SelectionChanged="ListBox_SelectionChanged">
-                    <ListBoxItem Name="Home">
+                <ListBox x:ConnectionId='2' SelectionMode="Single" 
+                                                                    >
+                    <ListBoxItem x:ConnectionId='3' Name="Home">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE80F;" />
                             <TextBlock FontSize="24" Margin="20,0,0,0">Current Weather</TextBlock>
                         </StackPanel>
                     </ListBoxItem>
-                    <ListBoxItem Name="Condition">
+                    <ListBoxItem x:ConnectionId='4' Name="Condition">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE1CE;" />
                             <TextBlock FontSize="24" Margin="20,0,0,0">Conditions</TextBlock>
                         </StackPanel>
                     </ListBoxItem>
-                    <ListBoxItem Name="Forecast">
+                    <ListBoxItem x:ConnectionId='5' Name="Forecast">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE1CE;" />
                             <TextBlock FontSize="24" Margin="20,0,0,0">Forecast</TextBlock>
                         </StackPanel>
                     </ListBoxItem>
-                    <ListBoxItem Name="Astronomy">
+                    <ListBoxItem x:ConnectionId='6' Name="Astronomy">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE1CE;" />
                             <TextBlock FontSize="24" Margin="20,0,0,0">Astronomy</TextBlock>
                         </StackPanel>
                     </ListBoxItem>
-                    <ListBoxItem Name="Webcam">
+                    <ListBoxItem x:ConnectionId='7' Name="Webcam">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE1CE;" />
                             <TextBlock FontSize="24" Margin="20,0,0,0">Webcams</TextBlock>
@@ -96,9 +96,10 @@
                 </ListBox>
             </SplitView.Pane>
             <SplitView.Content>
-                <Frame Name="MyFrame"></Frame>
+                <Frame x:ConnectionId='8' Name="MyFrame"></Frame>
             </SplitView.Content>
 
         </SplitView>
     </Grid>
 </Page>
+

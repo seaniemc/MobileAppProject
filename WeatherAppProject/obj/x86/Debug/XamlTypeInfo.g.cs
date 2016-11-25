@@ -253,6 +253,7 @@ namespace WeatherAppProject.WeatherAppProject_XamlTypeInfo
             case 7:   //  WeatherAppProject.ViewFrames.Conditions
                 userType = new global::WeatherAppProject.WeatherAppProject_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_7_Conditions;
+                userType.AddMemberName("ReadInFile");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -292,6 +293,16 @@ namespace WeatherAppProject.WeatherAppProject_XamlTypeInfo
             var that = (global::WeatherAppProject.MainPage)instance;
             that.ReadInFile = (global::WeatherAppProject.ViewModel.CountryCodesVM)Value;
         }
+        private object get_1_Conditions_ReadInFile(object instance)
+        {
+            var that = (global::WeatherAppProject.ViewFrames.Conditions)instance;
+            return that.ReadInFile;
+        }
+        private void set_1_Conditions_ReadInFile(object instance, object Value)
+        {
+            var that = (global::WeatherAppProject.ViewFrames.Conditions)instance;
+            that.ReadInFile = (global::WeatherAppProject.ViewModel.CountryCodesVM)Value;
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
@@ -305,6 +316,12 @@ namespace WeatherAppProject.WeatherAppProject_XamlTypeInfo
                 xamlMember = new global::WeatherAppProject.WeatherAppProject_XamlTypeInfo.XamlMember(this, "ReadInFile", "WeatherAppProject.ViewModel.CountryCodesVM");
                 xamlMember.Getter = get_0_MainPage_ReadInFile;
                 xamlMember.Setter = set_0_MainPage_ReadInFile;
+                break;
+            case "WeatherAppProject.ViewFrames.Conditions.ReadInFile":
+                userType = (global::WeatherAppProject.WeatherAppProject_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WeatherAppProject.ViewFrames.Conditions");
+                xamlMember = new global::WeatherAppProject.WeatherAppProject_XamlTypeInfo.XamlMember(this, "ReadInFile", "WeatherAppProject.ViewModel.CountryCodesVM");
+                xamlMember.Getter = get_1_Conditions_ReadInFile;
+                xamlMember.Setter = set_1_Conditions_ReadInFile;
                 break;
             }
             return xamlMember;

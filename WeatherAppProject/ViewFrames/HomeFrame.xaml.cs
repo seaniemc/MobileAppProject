@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using WeatherAppProject.Model;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -25,6 +26,22 @@ namespace WeatherAppProject.ViewFrames
         public HomeFrame()
         {
             this.InitializeComponent();
+        }
+
+        private async void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            //MyProgressRing.IsActive = true;
+            //MyProgressRing.Visibility = Visibility.Visible;
+
+            var position = await LocationManager.GetPosition();
+
+                OpenWeatherRootObject myWeather = await WeatherFacade.GetWeatherLatlon(
+                    position.Coordinate.Latitude, position.Coordinate.Longitude);
+
+                WeatherResultText.Text = myWeather.name.ToString() + " -- " + myWeather.weather[0].description;
+
+            //MyProgressRing.IsActive = false;
+            //MyProgressRing.Visibility = Visibility.Collapsed;
         }
     }
 }

@@ -29,19 +29,17 @@ namespace WeatherAppProject
         public MainPage()
         {
             this.InitializeComponent();
+            
             ReadInFile = new CountryCodesVM("CountryCodes");
-
-            this.InitializeComponent();
+            InitializeComponent();
             BackButton.Visibility = Visibility.Collapsed;
             MyFrame.Navigate(typeof(HomeFrame));
             TitleTextBlock.Text = "Current Weather";
             Home.IsSelected = true;
-
-        }
-
-        public CountryCodesVM ReadInFile { get; set; }
-       
             
+        }
+         public CountryCodesVM ReadInFile { get; set; }
+
 
         private void HamburgerButton_Click(object sender, RoutedEventArgs e)
         {
@@ -100,17 +98,7 @@ namespace WeatherAppProject
 
     //}
 
-    //private async void WeatherCityButton_Click(object sender, RoutedEventArgs e)
-    //{
-    //    var city = CityTextBox.Text.ToString();
-    //    var country = countryCombo.SelectedValue.ToString();
-
-    //    RootObject myCityWeather = await WeatherFacade.GetWeatherCity(country, city);
-
-    //    WeatherResultCityText.Text = myCityWeather.current_observation.display_location.city + " _  " + myCityWeather.current_observation.temp_c.ToString() + "-" + myCityWeather.current_observation.wind_kph;
-
-    //}
-
+    
 
 }
 
