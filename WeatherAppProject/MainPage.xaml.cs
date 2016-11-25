@@ -76,7 +76,16 @@ namespace WeatherAppProject
                 MyFrame.Navigate(typeof(ForecastFrame));
                 TitleTextBlock.Text = "Forecast";
             } 
-           
+            else if (Astronomy.IsSelected)
+            {
+                MyFrame.Navigate(typeof(AstronomyFrame));
+                TitleTextBlock.Text = "Astronomy";
+            }
+            else if (Webcam.IsSelected)
+            {
+                MyFrame.Navigate(typeof(WebcamFrame));
+                TitleTextBlock.Text = "Webcams";
+            }
         }
     }
 
