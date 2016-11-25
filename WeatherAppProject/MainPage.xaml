@@ -12,8 +12,9 @@
 <!--<Page.Resources>
         <convertors:ObjectsExsistToVisible x:Key="ObjectsExsistToVisible"/>
     </Page.Resources-->
+ 
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <!--<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel HorizontalAlignment="Left">
             <Button Name="WeatherButton" Content="Lets Get the Weather" Click="WeatherButton_Click">
             </Button>
@@ -38,5 +39,5 @@
             <TextBox Name="CityTextBox" PlaceholderText="Enter City"/>
         </StackPanel>
 
-    </Grid>
+    </Grid>-->
 </Page>
