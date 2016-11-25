@@ -192,7 +192,6 @@ C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherApp
 C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\obj\x86\Debug\ProjectArchitectures.txt
-C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\obj\x86\Debug\WeatherAppProject.csprojResolveAssemblyReference.cache
 C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\obj\x86\Debug\ViewFrames\ConditionsFrame.g.i.cs
 C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\obj\x86\Debug\ViewFrames\ConditionsFrame.g.cs
 C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\obj\x86\Debug\ViewFrames\ForecastFrame.g.i.cs
@@ -209,3 +208,13 @@ C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherApp
 C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\obj\x86\Debug\ViewFrames\ForecastFrame.xbf
 C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\obj\x86\Debug\ViewFrames\HomeFrame.xbf
 C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\obj\x86\Debug\ViewFrames\WebcamFrame.xbf
+C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\bin\x86\Debug\ViewFrames\AstronomyFrame.xbf
+C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\bin\x86\Debug\ViewFrames\ConditionsFrame.xbf
+C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\bin\x86\Debug\ViewFrames\ForecastFrame.xbf
+C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\bin\x86\Debug\ViewFrames\HomeFrame.xbf
+C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\bin\x86\Debug\ViewFrames\WebcamFrame.xbf
+C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\obj\x86\Debug\ViewFrames\AstronomyFrame.g.i.cs
+C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\obj\x86\Debug\ViewFrames\AstronomyFrame.g.cs
+C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\obj\x86\Debug\ViewFrames\AstronomyFrame.xaml
+C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\obj\x86\Debug\ViewFrames\AstronomyFrame.xbf
+C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\obj\x86\Debug\WeatherAppProject.csprojResolveAssemblyReference.cache

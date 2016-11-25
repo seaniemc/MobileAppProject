@@ -10,6 +10,7 @@
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
       <RootProperty Name="RowDefinitions" />
       <RootProperty Name="Children" />
+      <RootProperty Name="Background" />
       <RootMethod Name="GetRow" />
       <RootMethod Name="SetRow" />
     </RootType>
@@ -33,6 +34,7 @@
       <RootProperty Name="OpenPaneLength" />
       <RootProperty Name="CompactPaneLength" />
       <RootProperty Name="Pane" />
+      <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListBox">
       <RootProperty Name="SelectionMode" />
@@ -56,6 +58,9 @@
       <RootProperty Name="Name" />
       <RootProperty Name="FontWeight" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Frame">
+      <RootProperty Name="Name" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Name" />
       <RootProperty Name="FontFamily" />
@@ -71,5 +76,11 @@
       <RootProperty Name="PlaceholderText" />
     </RootType>
     <RootType FullName="WeatherAppProject.MainPage" />
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
+    <RootType FullName="WeatherAppProject.ViewFrames.AstronomyFrame" />
+    <RootType FullName="WeatherAppProject.ViewFrames.Conditions" />
+    <RootType FullName="WeatherAppProject.ViewFrames.ForecastFrame" />
+    <RootType FullName="WeatherAppProject.ViewFrames.HomeFrame" />
+    <RootType FullName="WeatherAppProject.ViewFrames.WebcamFrame" />
   </Roots.RootTypes>
 </Roots>

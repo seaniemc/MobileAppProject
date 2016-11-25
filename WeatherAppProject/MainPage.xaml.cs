@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using WeatherAppProject.ViewModel;
+using WeatherAppProject.ViewFrames;
 using WeatherAppProject.Model;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -31,10 +32,10 @@ namespace WeatherAppProject
             ReadInFile = new CountryCodesVM("CountryCodes");
 
             this.InitializeComponent();
-            //BackButton.Visibility = Visibility.Collapsed;
-            ////MyFrame.Navigate(typeof(Financial));
-            //TitleTextBlock.Text = "Financial";
-            //Financial.IsSelected = true;
+            BackButton.Visibility = Visibility.Collapsed;
+            MyFrame.Navigate(typeof(HomeFrame));
+            TitleTextBlock.Text = "Current Weather";
+            Home.IsSelected = true;
 
         }
 
@@ -58,18 +59,24 @@ namespace WeatherAppProject
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (Financial.IsSelected)
+            if (Home.IsSelected)
             {
                 BackButton.Visibility = Visibility.Collapsed;
-               // MyFrame.Navigate(typeof(Financial));
-                TitleTextBlock.Text = "Financial";
+               MyFrame.Navigate(typeof(HomeFrame));
+                TitleTextBlock.Text = "Current Weather";
             }
-            else if (Food.IsSelected)
+            else if (Condition.IsSelected)
             {
                 BackButton.Visibility = Visibility.Visible;
-               // MyFrame.Navigate(typeof(Food));
-                TitleTextBlock.Text = "Food";
+                MyFrame.Navigate(typeof(Conditions));
+                TitleTextBlock.Text = "Conditions";
             }
+            else if (Forecast.IsSelected)
+            {
+                MyFrame.Navigate(typeof(ForecastFrame));
+                TitleTextBlock.Text = "Forecast";
+            } 
+           
         }
     }
 
