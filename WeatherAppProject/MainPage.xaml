@@ -77,9 +77,9 @@
                     </ListBoxItem>
                 </ListBox>
             </SplitView.Pane>
-            <SplitView.Content>
+           <!-- <SplitView.Content>
                 <Frame Name="MyFrame"></Frame>
-            </SplitView.Content>
+            </SplitView.Content>-->
 
         </SplitView>
 
