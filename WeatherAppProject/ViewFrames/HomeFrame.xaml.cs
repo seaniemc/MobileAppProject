@@ -34,25 +34,34 @@ namespace WeatherAppProject.ViewFrames
             //MyProgressRing.IsActive = true;
             //MyProgressRing.Visibility = Visibility.Visible;
 
+            //Makes call to a call to the location manger class to get geolocation
             var position = await LocationManager.GetPosition();
 
-                OpenWeatherRootObject myWeather = await WeatherFacade.GetWeatherLatlon(
-                    position.Coordinate.Latitude, position.Coordinate.Longitude);
+            //Calls the WeaterFacade and passes the current geo location
+            OpenWeatherRootObject myWeather = await WeatherFacade.GetWeatherLatlon(
+                position.Coordinate.Latitude, position.Coordinate.Longitude);
 
+            //Is used to populate the xmal in Grid.Row 0
             WeatherResultText.Text = myWeather.sys.country.ToString() + "   " +  myWeather.name.ToString();
             string icon = String.Format("http://openweathermap.org/img/w/{0}.png",myWeather.weather[0].icon);
             TodaysImage.Source = new BitmapImage(new Uri(icon, UriKind.Absolute));
-
             TempText.Text = ((int)myWeather.main.temp).ToString() +" C";
             DescripitionText.Text = myWeather.weather[0].description.ToString();
 
-            PressureResultText.Text = myWeather.main.pressure.ToString() +" hPa" ;
-            ((int)myWeather.main.temp_max).ToString();
-            ((int)myWeather.main.temp_min).ToString();
-
+            //Is used to populate the xmal in Grid.Row 1
+            PressureResultText.Text = myWeather.main.pressure.ToString() +" hPa";
+            MaxTempText.Text = ((int)myWeather.main.temp_max).ToString() +" C";
+            MinTempText.Text = ((int)myWeather.main.temp_min).ToString() +" C";
             PressureImage.Source = new BitmapImage(new Uri(icon, UriKind.Absolute));
-            //myWeather.weather[1].icon
 
+            //Used to populate the xmal in Grid.Row 1
+
+            WindressureResultText.Text = myWeather.wind.speed.ToString() + " kph";
+
+            double timestamp = myWeather.sys.sunrise;
+            DateTime dateTime = new System.DateTime(1970, 1, 1, 0, 0, 0, 0);
+            dateTime = dateTime.AddSeconds(timestamp);
+            SunUpText.Text = dateTime.ToString();
             //MyProgressRing.IsActive = false;
             //MyProgressRing.Visibility = Visibility.Collapsed;
         }

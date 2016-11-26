@@ -67,7 +67,6 @@
       <RootProperty Name="Inlines" />
       <RootProperty Name="Name" />
       <RootProperty Name="FontWeight" />
-      <RootProperty Name="Width" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Frame">
       <RootProperty Name="Name" />
