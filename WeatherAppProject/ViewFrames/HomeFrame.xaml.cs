@@ -46,6 +46,11 @@ namespace WeatherAppProject.ViewFrames
             TempText.Text = ((int)myWeather.main.temp).ToString() +" C";
             DescripitionText.Text = myWeather.weather[0].description.ToString();
 
+            PressureResultText.Text = myWeather.main.pressure.ToString() +" hPa" ;
+            ((int)myWeather.main.temp_max).ToString();
+            ((int)myWeather.main.temp_min).ToString();
+
+            PressureImage.Source = new BitmapImage(new Uri(icon, UriKind.Absolute));
             //myWeather.weather[1].icon
 
             //MyProgressRing.IsActive = false;
