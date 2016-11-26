@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using WeatherAppProject.ViewModel;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -25,6 +26,11 @@ namespace WeatherAppProject.ViewFrames
         public ForecastFrame()
         {
             this.InitializeComponent();
+            ReadInFile = new CountryCodesVM("CountryCodes");
+            this.InitializeComponent();
+
         }
+        public CountryCodesVM ReadInFile { get; set; }
     }
+    
 }

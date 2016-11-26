@@ -8,7 +8,7 @@
     xmlns:viewmodel="using:WeatherAppProject.ViewModel"
     xmlns:convertors="using:WeatherAppProject.Convertors"
     mc:Ignorable="d">
-
+    
 <!--<Page.Resources>
         <convertors:ObjectsExsistToVisible x:Key="ObjectsExsistToVisible"/>
     </Page.Resources-->
@@ -18,7 +18,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-
+        <!-- http://blog.jerrynixon.com/2015/04/implementing-hamburger-button-with.html -->
         <RelativePanel>
             <Button x:ConnectionId='9' Name="HamburgerButton" 
                     RelativePanel.AlignLeftWithPanel="True"

@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
@@ -37,10 +38,22 @@ namespace WeatherAppProject.ViewFrames
         {
             var city = CityTextBox.Text.ToString();
             var country = countryCombo.SelectedValue.ToString();
-
+            
             RootObject myCityWeather = await WeatherFacade.GetWeatherConditions(country, city);
+            //Grid.Row 1
+            LocationResultText.Text = myCityWeather.current_observation.display_location.full.ToString();
+            CurrentTimeText.Text = myCityWeather.current_observation.local_time_rfc822.ToString();
 
-            WeatherResultCityText.Text = myCityWeather.current_observation.display_location.city + " _  " + myCityWeather.current_observation.temp_c.ToString() + "-" + myCityWeather.current_observation.wind_kph;
+            MinTempText.Text = myCityWeather.current_observation.temperature_string.ToString();
+
+            string icon = String.Format(myCityWeather.current_observation.icon_url);
+            PressureImage.Source = new BitmapImage(new Uri(icon, UriKind.Absolute));
+
+            //Grid.Row 2
+            WindSpeedext.Text = myCityWeather.current_observation.wind_string.ToString();
+            PrecipText.Text = myCityWeather.current_observation.precip_today_string.ToString();
+            WindImage.Source = new BitmapImage(new Uri(icon, UriKind.Absolute));
+
         }
 
     }
