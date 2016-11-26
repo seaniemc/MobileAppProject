@@ -15,7 +15,7 @@ namespace WeatherAppProject
         public async static Task<OpenWeatherRootObject> GetWeatherLatlon(double lat, double lon)
         {
             var http = new HttpClient();
-            var url = String.Format("http://api.openweathermap.org/data/2.5/weather?lat={0}&lon={1}&appid=cdfbbb0c252cbc6513da824fcdaedca1", lat, lon);
+            var url = String.Format("http://api.openweathermap.org/data/2.5/weather?lat={0}&lon={1}&units=metric&appid=cdfbbb0c252cbc6513da824fcdaedca1", lat, lon);
             var response = await http.GetAsync(url);
             var jsonMessage = await response.Content.ReadAsStringAsync();
             var serializer = new DataContractJsonSerializer(typeof(OpenWeatherRootObject));

@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
@@ -38,9 +39,14 @@ namespace WeatherAppProject.ViewFrames
                 OpenWeatherRootObject myWeather = await WeatherFacade.GetWeatherLatlon(
                     position.Coordinate.Latitude, position.Coordinate.Longitude);
 
-            WeatherResultText.Text = myWeather.sys.message.ToString() + " -- " +  myWeather.name.ToString();
-           
-                //myWeather.weather[1].icon
+            WeatherResultText.Text = myWeather.sys.country.ToString() + "   " +  myWeather.name.ToString();
+            string icon = String.Format("http://openweathermap.org/img/w/{0}.png",myWeather.weather[0].icon);
+            TodaysImage.Source = new BitmapImage(new Uri(icon, UriKind.Absolute));
+
+            TempText.Text = ((int)myWeather.main.temp).ToString() +" C";
+            DescripitionText.Text = myWeather.weather[0].description.ToString();
+
+            //myWeather.weather[1].icon
 
             //MyProgressRing.IsActive = false;
             //MyProgressRing.Visibility = Visibility.Collapsed;
