@@ -29,9 +29,9 @@ namespace WeatherAppProject
         public MainPage()
         {
             this.InitializeComponent();
-            
             ReadInFile = new CountryCodesVM("CountryCodes");
-            InitializeComponent();
+
+            this.InitializeComponent();
             BackButton.Visibility = Visibility.Collapsed;
             MyFrame.Navigate(typeof(HomeFrame));
             TitleTextBlock.Text = "Current Weather";

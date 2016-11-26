@@ -38,7 +38,9 @@ namespace WeatherAppProject.ViewFrames
                 OpenWeatherRootObject myWeather = await WeatherFacade.GetWeatherLatlon(
                     position.Coordinate.Latitude, position.Coordinate.Longitude);
 
-                WeatherResultText.Text = myWeather.name.ToString() + " -- " + myWeather.weather[0].description;
+            WeatherResultText.Text = myWeather.sys.message.ToString() + " -- " +  myWeather.name.ToString();
+           
+                //myWeather.weather[1].icon
 
             //MyProgressRing.IsActive = false;
             //MyProgressRing.Visibility = Visibility.Collapsed;

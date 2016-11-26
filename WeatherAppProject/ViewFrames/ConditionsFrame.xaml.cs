@@ -27,7 +27,9 @@ namespace WeatherAppProject.ViewFrames
         public Conditions()
         {
             this.InitializeComponent();
-            
+            ReadInFile = new CountryCodesVM("CountryCodes");
+            this.InitializeComponent();
+
         }
         public CountryCodesVM ReadInFile { get; set; }
 
