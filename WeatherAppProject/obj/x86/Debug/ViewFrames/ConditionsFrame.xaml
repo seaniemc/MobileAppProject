@@ -1,4 +1,4 @@
-﻿<Page
+﻿<Page x:ConnectionId='1'
     x:Class="WeatherAppProject.ViewFrames.Conditions"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -16,22 +16,23 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <StackPanel Margin="10,15,0,0" Orientation="Vertical" HorizontalAlignment="Center">
-            <ComboBox Name="countryCombo"
+            <ComboBox x:ConnectionId='5' Name="countryCombo"
                       PlaceholderText="Select Country"
-                      ItemsSource="{x:Bind ReadInFile.CountryCodes, Mode=OneWay}"
-                      SelectedIndex="{x:Bind ReadInFile.SelectedIndex}"
+                                                                                 
+                                                                       
                       DisplayMemberPath="Name"
                       SelectedValuePath="Code"
                       MinWidth="250">
             </ComboBox>
         </StackPanel>
         <StackPanel  Margin="0,15,0,0" Orientation="Vertical" Grid.Column="2" HorizontalAlignment="Center">
-            <TextBox Name="CityTextBox" PlaceholderText="Enter City"/>
+            <TextBox x:ConnectionId='4' Name="CityTextBox" PlaceholderText="Enter City"/>
         </StackPanel>
         <StackPanel  Margin="10,15,10,0" Grid.Column="1" Grid.Row="0" Orientation="Vertical" HorizontalAlignment="Center">
-            <Button Name="ConditionsButton" Content=" FIND" Click="ConditionsButton_Click">
+            <Button x:ConnectionId='2' Name="ConditionsButton" Content=" FIND"                               >
             </Button>
-            <TextBlock Name="WeatherResultCityText"></TextBlock>
+            <TextBlock x:ConnectionId='3' Name="WeatherResultCityText"></TextBlock>
         </StackPanel>
     </Grid>
 </Page>
+
