@@ -12,6 +12,7 @@ namespace WeatherAppProject
 {
     public class WeatherFacade
     {
+        
 
         public async static Task<OpenWeatherRootObject> GetWeatherLatlon(double lat, double lon)
         {

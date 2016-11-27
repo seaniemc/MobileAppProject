@@ -42,7 +42,8 @@
                      Orientation="Vertical" 
                      HorizontalAlignment="Center">
             <Button Name="ConditionsButton" 
-                    Content=" FIND" >
+                    Content=" FIND"
+                    Click="ConditionsButton_Click">
 
             </Button>
             <TextBlock Name="WeatherResultCityText"></TextBlock>

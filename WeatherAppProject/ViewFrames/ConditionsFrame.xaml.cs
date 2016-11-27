@@ -38,7 +38,10 @@ namespace WeatherAppProject.ViewFrames
         {
             var city = CityTextBox.Text.ToString();
             var country = countryCombo.SelectedValue.ToString();
-            
+
+            MyProgressRing.IsActive = true;
+            MyProgressRing.Visibility = Visibility.Visible;
+
             RootObject myCityWeather = await WeatherFacade.GetWeatherConditions(country, city);
             //Grid.Row 1
             LocationResultText.Text = myCityWeather.current_observation.display_location.full.ToString();
@@ -53,6 +56,9 @@ namespace WeatherAppProject.ViewFrames
             WindSpeedext.Text = myCityWeather.current_observation.wind_string.ToString();
             PrecipText.Text = myCityWeather.current_observation.precip_today_string.ToString();
             WindImage.Source = new BitmapImage(new Uri(icon, UriKind.Absolute));
+
+            MyProgressRing.IsActive = false;
+            MyProgressRing.Visibility = Visibility.Collapsed;
 
         }
 

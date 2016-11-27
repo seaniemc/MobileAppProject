@@ -42,7 +42,8 @@
                      Orientation="Vertical" 
                      HorizontalAlignment="Center">
             <Button x:ConnectionId='11' Name="ConditionsButton" 
-                    Content=" FIND" >
+                    Content=" FIND"
+                                                  >
 
             </Button>
             <TextBlock x:ConnectionId='12' Name="WeatherResultCityText"></TextBlock>
