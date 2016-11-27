@@ -35,6 +35,9 @@ namespace WeatherAppProject.ViewFrames
         private async void ConditionsButton_Click(object sender, RoutedEventArgs e)
         {
             var city = CityTextBox.Text.ToString();
+            city = city.Replace(" ", "_");
+            var cityToUpper = Conditions.FirstCharToUpper(city);
+
             var country = countryCombo.SelectedValue.ToString();
 
             MyProgressRing.IsActive = true;
