@@ -52,7 +52,7 @@ namespace WeatherAppProject
         public async static Task<RootObject> GetWeatherAstronomy(string countryCode, string city)
         {
             var http = new HttpClient();
-            var url = String.Format("http://api.wunderground.com/api/817ffb35035be408/astronomy/q/{0}/{1}.json", countryCode, city);
+            var url = String.Format("http://api.wunderground.com/api/817ffb35035be408/planner_07010731/q/{0}/{1}.json", countryCode, city);
             var response = await http.GetAsync(url);
             var jsonMessage = await response.Content.ReadAsStringAsync();
             var serializer = new DataContractJsonSerializer(typeof(RootObject));

@@ -47,6 +47,7 @@ namespace WeatherAppProject.ViewFrames
             RootObject myCityWeather = await WeatherFacade.GetWeatherForecast(country, city);
             
             
+            
         }
         //public static void CreateTxtForcast( forecastList)
         //{

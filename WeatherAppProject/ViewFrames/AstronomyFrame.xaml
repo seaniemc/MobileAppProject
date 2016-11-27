@@ -9,5 +9,208 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Margin="10,15,0,0" Orientation="Vertical" HorizontalAlignment="Center">
+            <ComboBox Name="countryCombo"
+                      PlaceholderText="Select Country"
+                      ItemsSource="{x:Bind ReadInFile.CountryCodes, Mode=OneWay}"
+                      SelectedIndex="{x:Bind ReadInFile.SelectedIndex}"
+                      DisplayMemberPath="Name"
+                      SelectedValuePath="Code"
+                      MinWidth="250">
+            </ComboBox>
+        </StackPanel>
+        <StackPanel  Margin="0,15,0,0" 
+                     Orientation="Vertical" 
+                     Grid.Column="2" 
+                     HorizontalAlignment="Center">
+            <TextBox Name="CityTextBox" 
+                     PlaceholderText="Enter City Name"
+                     FontSize="18"/>
+        </StackPanel>
+        <StackPanel  Margin="10,15,10,0" Grid.Column="1" Grid.Row="0" Orientation="Vertical" HorizontalAlignment="Center">
+            <Button Name="ConditionsButton" 
+                    Content=" FIND" 
+                    Click="ConditionsButton_Click">
+            </Button>
+            <TextBlock Name="WeatherResultCityText"></TextBlock>
+        </StackPanel>
+        <StackPanel Margin="10,15,0,0" 
+                    HorizontalAlignment="Left"
+                    Grid.Row="1" Grid.Column="0">
+            <TextBlock FontSize="20">Rain</TextBlock>
+            <TextBlock Margin="0,10,0,0" 
+                       Name="RainText" 
+                       TextWrapping="Wrap"
+                       FontSize="18">
+            </TextBlock>
+            <TextBlock Margin="0,10,0,0" 
+                       Name="RainDecText" 
+                       FontSize="18"
+                       TextWrapping="Wrap">
+            </TextBlock>
+            <TextBlock Margin="0,10,0,0" 
+                       Name="RainNameText" 
+                       FontSize="18"
+                       TextWrapping="Wrap">
+            </TextBlock>
+        </StackPanel>
+        <StackPanel Margin="10,15,0,0" Orientation="Vertical" 
+                    HorizontalAlignment="Center" 
+                    Grid.Row="1" Grid.Column="1">
+            <TextBlock FontSize="20" TextWrapping="Wrap">Wind</TextBlock>
+            <TextBlock Margin="0,15,0,0" 
+                       FontSize="18" 
+                       Name="WindText" 
+                       TextWrapping="Wrap"/>
+            <TextBlock FontSize="18" 
+                       Name="WindNameText" 
+                       TextWrapping="Wrap"/>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" 
+                    HorizontalAlignment="Center" 
+                    Grid.Row="1" 
+                    Grid.Column="2">
+            <TextBlock FontSize="20">Clouds</TextBlock>
+            <TextBlock Margin="0,15,0,0" 
+                       FontSize="18" 
+                       Name="CloudTempText" 
+                       TextWrapping="Wrap"/>
+            <TextBlock FontSize="18" 
+                       Name="MostlyCloudsDescText" 
+                       TextWrapping="Wrap"/>
+            <TextBlock FontSize="18" 
+                       Name="MostlyCloudsText" 
+                       TextWrapping="Wrap"/>
+        </StackPanel>
+        <!-- Grid.Row 2 -->
+        <StackPanel Margin="10,15,0,0" 
+                    HorizontalAlignment="Left" 
+                    Grid.Row="2" Grid.Column="0">
+            <TextBlock FontSize="22" 
+                       TextWrapping="Wrap">Snow</TextBlock>
+            <TextBlock Margin="0,10,0,0" 
+                       Name="SnowText" 
+                       FontSize="18"
+                        TextWrapping="Wrap">
+            </TextBlock>
+            <TextBlock FontSize="18" 
+                       Name="SnowDescText" 
+                       TextWrapping="Wrap"/>
+            <TextBlock Margin="0,10,0,0" 
+                       Name="SnowNameText" 
+                       FontSize="18"
+                       TextWrapping="Wrap">
+                
+            </TextBlock>
+        </StackPanel>
+        <StackPanel Margin="10,15,0,0" Orientation="Vertical" 
+                    HorizontalAlignment="Center" 
+                    Grid.Row="2" Grid.Column="1" >
+            <TextBlock FontSize="20" TextWrapping="Wrap"> Fog</TextBlock>
+            <TextBlock Margin="0,15,0,0" 
+                       FontSize="18" 
+                       Name="FogText" 
+                       TextWrapping="Wrap"/>
+            <TextBlock FontSize="18" 
+                       Name="FogDescText" 
+                       TextWrapping="Wrap"/>
+            <TextBlock Margin="0,15,0,0" 
+                       FontSize="18" 
+                       Name="FogNameText" 
+                       TextWrapping="Wrap"/>
+        </StackPanel>
+        <StackPanel Orientation="Vertical"  
+                    HorizontalAlignment="Center" 
+                    Grid.Row="2" Grid.Column="2">
+            <TextBlock FontSize="20" TextWrapping="Wrap"> Freezing</TextBlock>
+            <TextBlock Margin="0,15,0,0" 
+                       FontSize="18" 
+                       Name="FreezingText" 
+                       TextWrapping="Wrap"/>
+            <TextBlock FontSize="18" 
+                       Name="FreezingDescText" 
+                       TextWrapping="Wrap"/>
+            <TextBlock Margin="0,15,0,0" 
+                       FontSize="18" 
+                       Name="FreezingNameText" 
+                       TextWrapping="Wrap"/>
+        </StackPanel>
+        <StackPanel Margin="10,15,0,0" 
+                    HorizontalAlignment="Left" 
+                    Grid.Row="3" Grid.Column="0">
+            <TextBlock FontSize="22" 
+                       TextWrapping="Wrap">High Tempature</TextBlock>
+            <TextBlock Margin="0,10,0,0" 
+                       Name="HighTempText" 
+                       FontSize="18"
+                        TextWrapping="Wrap">
+            </TextBlock>
+            <TextBlock FontSize="18" 
+                       Name="HighTempDescText" 
+                       TextWrapping="Wrap"/>
+            <TextBlock Margin="0,10,0,0" 
+                       Name="HighTempNameText" 
+                       FontSize="18"
+                       TextWrapping="Wrap">
+
+            </TextBlock>
+        </StackPanel>
+        <StackPanel Margin="10,15,0,0" Orientation="Vertical" 
+                    HorizontalAlignment="Center" 
+                    Grid.Row="3" Grid.Column="1" >
+            <TextBlock FontSize="20" TextWrapping="Wrap">Mid Tempature</TextBlock>
+            <TextBlock Margin="0,15,0,0" 
+                       FontSize="18" 
+                       Name="MidTempText" 
+                       TextWrapping="Wrap"/>
+            <TextBlock Margin="0,15,0,0" 
+                       FontSize="18" 
+                       Name="MidTempDescText" 
+                       TextWrapping="Wrap"/>
+            <TextBlock Margin="0,15,0,0" 
+                       FontSize="18" 
+                       Name="MidTempNameText" 
+                       TextWrapping="Wrap"/>
+        </StackPanel>
+        <StackPanel Orientation="Vertical"  
+                    HorizontalAlignment="Center" 
+                    Grid.Row="3" Grid.Column="2">
+            <TextBlock FontSize="20" TextWrapping="Wrap"> Warm Temp</TextBlock>
+            <TextBlock Margin="0,15,0,0" 
+                       FontSize="18" 
+                       Name="WarmTempText" 
+                       TextWrapping="Wrap"/>
+            <TextBlock Margin="0,15,0,0" 
+                       FontSize="18" 
+                       Name="WarmTempDescText" 
+                       TextWrapping="Wrap"/>
+            <TextBlock Margin="0,15,0,0" 
+                       FontSize="18" 
+                       Name="WarmTempNameText" 
+                       TextWrapping="Wrap"/>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" 
+                    HorizontalAlignment="Center" 
+                    Grid.Row="4" 
+                    Grid.Column="1" >
+            <ProgressRing Name="MyProgressRing"
+                      Width="100"
+                      Height="100"
+                      Foreground="Gray"
+                      VerticalAlignment="Center"
+                      HorizontalAlignment="Center" />
+        </StackPanel>
     </Grid>
 </Page>
