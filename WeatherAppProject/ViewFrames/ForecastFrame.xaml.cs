@@ -45,9 +45,16 @@ namespace WeatherAppProject.ViewFrames
             MyProgressRing.Visibility = Visibility.Visible;
 
             RootObject myCityWeather = await WeatherFacade.GetWeatherForecast(country, city);
-            
-            
-            
+
+            myCityWeather.forecast.txt_forecast.date.ToString();
+
+
+
+            foreach (var day in myCityWeather.forecast.txt_forecast.forecastday)
+            {
+                day.title.ToString();
+            }
+
         }
         //public static void CreateTxtForcast( forecastList)
         //{

@@ -48,20 +48,29 @@ namespace WeatherAppProject.ViewFrames
             RootObject myCityWeather = await WeatherFacade.GetWeatherConditions(country, cityToUpper);
             //Grid.Row 1
             //LocationResultText.Text = myCityWeather.current_observation.display_location.full.ToString();
-            CurrentTimeText.Text = myCityWeather.current_observation.local_time_rfc822.ToString();
+            if (myCityWeather.current_observation == null)
+            {
+                ErrorText.Text = "Please Check Spelling";
+            }
+            else
+            {
+                CurrentTimeText.Text = myCityWeather.current_observation.local_time_rfc822.ToString();
 
-            MinTempText.Text = myCityWeather.current_observation.temperature_string.ToString();
+                MinTempText.Text = myCityWeather.current_observation.temperature_string.ToString();
 
-            string icon = String.Format(myCityWeather.current_observation.icon_url);
-            PressureImage.Source = new BitmapImage(new Uri(icon, UriKind.Absolute));
+                string icon = String.Format(myCityWeather.current_observation.icon_url);
+                PressureImage.Source = new BitmapImage(new Uri(icon, UriKind.Absolute));
 
-            //Grid.Row 2
-            WindSpeedext.Text = myCityWeather.current_observation.wind_string.ToString();
-            PrecipText.Text = myCityWeather.current_observation.precip_today_string.ToString();
-            WindImage.Source = new BitmapImage(new Uri(icon, UriKind.Absolute));
+                //Grid.Row 2
+                WindSpeedext.Text = myCityWeather.current_observation.wind_string.ToString();
+                PrecipText.Text = myCityWeather.current_observation.precip_today_string.ToString();
+                WindImage.Source = new BitmapImage(new Uri(icon, UriKind.Absolute));
 
-            MyProgressRing.IsActive = false;
-            MyProgressRing.Visibility = Visibility.Collapsed;
+                MyProgressRing.IsActive = false;
+                MyProgressRing.Visibility = Visibility.Collapsed;
+            }    
+              
+
 
         }
         //http://stackoverflow.com/questions/4135317/make-first-letter-of-a-string-upper-case-for-maximum-performance

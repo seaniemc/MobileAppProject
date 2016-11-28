@@ -44,7 +44,7 @@
                     Content=" FIND" 
                                                   >
             </Button>
-            <TextBlock x:ConnectionId='12' Name="WeatherResultCityText"></TextBlock>
+            <TextBlock x:ConnectionId='12' Name="ErrorText"></TextBlock>
         </StackPanel>
         <StackPanel Margin="10,15,0,0" 
                     HorizontalAlignment="Left"

@@ -44,7 +44,7 @@
                     Content=" FIND" 
                     Click="ConditionsButton_Click">
             </Button>
-            <TextBlock Name="WeatherResultCityText"></TextBlock>
+            <TextBlock Name="ErrorText"></TextBlock>
         </StackPanel>
         <StackPanel Margin="10,15,0,0" 
                     HorizontalAlignment="Left"
