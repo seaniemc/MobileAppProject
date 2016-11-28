@@ -50,7 +50,11 @@ namespace WeatherAppProject.ViewFrames
             //LocationResultText.Text = myCityWeather.current_observation.display_location.full.ToString();
             if (myCityWeather.current_observation == null)
             {
-                ErrorText.Text = "Please Check Spelling";
+                CityTextBox.Text = "";
+                CityTextBox.PlaceholderText = "Re-enter City Name";
+
+                MyProgressRing.IsActive = false;
+                MyProgressRing.Visibility = Visibility.Collapsed;
             }
             else
             {
@@ -68,6 +72,8 @@ namespace WeatherAppProject.ViewFrames
 
                 MyProgressRing.IsActive = false;
                 MyProgressRing.Visibility = Visibility.Collapsed;
+
+                CityTextBox.PlaceholderText = "Enter City Name";
             }    
               
 

@@ -39,7 +39,8 @@
                      PlaceholderText="Enter City Name"
                      FontSize="18"/>
         </StackPanel>
-        <StackPanel  Margin="10,15,10,0" Grid.Column="1" Grid.Row="0" Orientation="Vertical" HorizontalAlignment="Center">
+        <StackPanel  Margin="10,15,10,0" Grid.Column="1" Grid.Row="0" 
+                     Orientation="Vertical" HorizontalAlignment="Center">
             <Button x:ConnectionId='11' Name="ConditionsButton" 
                     Content=" FIND" 
                                                   >

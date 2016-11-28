@@ -46,7 +46,7 @@ namespace WeatherAppProject.ViewFrames
 
             RootObject myCityWeather = await WeatherFacade.GetWeatherForecast(country, city);
 
-            myCityWeather.forecast.txt_forecast.date.ToString();
+          //  myCityWeather.forecast.txt_forecast.date.ToString();
 
 
 
