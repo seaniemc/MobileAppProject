@@ -37,8 +37,6 @@ namespace WeatherAppProject.ViewFrames
         }
         public CountryCodesVM ReadInFile { get; set; }
 
-        string image = "";
-
         private async void ConditionsButton_Click(object sender, RoutedEventArgs e)
         {
             if (CityTextBox.Text == "" && countryCombo.SelectedValue == null)
