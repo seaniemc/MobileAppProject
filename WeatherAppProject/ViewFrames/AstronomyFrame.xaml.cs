@@ -34,50 +34,81 @@ namespace WeatherAppProject.ViewFrames
 
         private async void ConditionsButton_Click(object sender, RoutedEventArgs e)
         {
-            var city = CityTextBox.Text.ToString();
-            city = city.Replace(" ", "_");
-            var cityToUpper = Conditions.FirstCharToUpper(city);
+           
 
-            var country = countryCombo.SelectedValue.ToString();
+            if (CityTextBox.Text == "" && countryCombo.SelectedValue == null)
+            {
+                CityTextBox.PlaceholderText = "ENTER CITY NAME";
+                countryCombo.PlaceholderText = "SELECT COUNTRY";
+            }
+            else
+            {
+                var country = countryCombo.SelectedValue.ToString();
+                var city = CityTextBox.Text.ToString();
 
-            MyProgressRing.IsActive = true;
-            MyProgressRing.Visibility = Visibility.Visible;
+                city = city.Replace(" ", "_");
+                var cityToUpper = Conditions.FirstCharToUpper(city);
 
-            RootObject myCityWeather = await WeatherFacade.GetWeatherAstronomy(country, city);
-            //Rain
-            RainText.Text = myCityWeather.trip.chance_of.chanceofprecip.name.ToString();
-            RainDecText.Text = myCityWeather.trip.chance_of.chanceofprecip.percentage.ToString() + " %";
+           
 
-            //Wind
-            WindText.Text = myCityWeather.trip.chance_of.chanceofwindyday.name.ToString();
-            WindNameText.Text = myCityWeather.trip.chance_of.chanceofwindyday.percentage.ToString() + " %";
+                MyProgressRing.IsActive = true;
+                MyProgressRing.Visibility = Visibility.Visible;
 
-            //Clouds
-            CloudTempText.Text = myCityWeather.trip.chance_of.chanceofcloudyday.name.ToString();
-            MostlyCloudsDescText.Text  = myCityWeather.trip.chance_of.chanceofcloudyday.description.ToString();
-            MostlyCloudsText.Text = myCityWeather.trip.chance_of.chanceofcloudyday.percentage.ToString() + " %";
+           
+           
+                RootObject myCityWeather = await WeatherFacade.GetWeatherAstronomy(country, city);
 
-            //Snow
-            SnowText.Text = myCityWeather.trip.chance_of.chanceofsnowday.name.ToString();
-            SnowDescText.Text = myCityWeather.trip.chance_of.chanceofsnowday.description.ToString();
-            SnowNameText.Text = myCityWeather.trip.chance_of.chanceofsnowday.percentage.ToString() + " %";
+                if (myCityWeather.trip == null)
+                {
+                    CityTextBox.Text = "";
+                    CityTextBox.PlaceholderText = "Re-enter City Name";
 
-            //Fog
-            FogText.Text = myCityWeather.trip.chance_of.chanceoffogday.name.ToString();
-            FogDescText.Text = myCityWeather.trip.chance_of.chanceoffogday.description.ToString();
-            FogNameText.Text = myCityWeather.trip.chance_of.chanceoffogday.percentage.ToString() + " %";
+                    MyProgressRing.IsActive = false;
+                    MyProgressRing.Visibility = Visibility.Collapsed;
+                }
+                else
+                {
+                    //Rain
+                    RainText.Text = myCityWeather.trip.chance_of.chanceofprecip.name.ToString();
+                    RainDecText.Text = myCityWeather.trip.chance_of.chanceofprecip.percentage.ToString() + " %";
 
-            //freezing
-            FreezingText.Text = myCityWeather.trip.chance_of.tempbelowfreezing.name.ToString();
-            //FreezingDescText.Text = myCityWeather.trip.chance_of.tempbelowfreezing.description.ToString();
-            FreezingNameText.Text = myCityWeather.trip.chance_of.tempbelowfreezing.percentage.ToString() + " %";
+                    //Wind
+                    WindText.Text = myCityWeather.trip.chance_of.chanceofwindyday.name.ToString();
+                    WindNameText.Text = myCityWeather.trip.chance_of.chanceofwindyday.percentage.ToString() + " %";
 
-            HighTempText.Text = myCityWeather.trip.chance_of.tempoverninety.name.ToString();
-            HighTempDescText.Text = myCityWeather.trip.chance_of.tempoverninety.description.ToString();
-            HighTempNameText.Text = myCityWeather.trip.chance_of.tempoverninety.percentage.ToString();
+                    //Clouds
+                    CloudTempText.Text = myCityWeather.trip.chance_of.chanceofcloudyday.name.ToString();
+                    MostlyCloudsDescText.Text = myCityWeather.trip.chance_of.chanceofcloudyday.description.ToString();
+                    MostlyCloudsText.Text = myCityWeather.trip.chance_of.chanceofcloudyday.percentage.ToString() + " %";
 
-            MyProgressRing.IsActive = false;
-            MyProgressRing.Visibility = Visibility.Collapsed;
+                    //Snow
+                    SnowText.Text = myCityWeather.trip.chance_of.chanceofsnowday.name.ToString();
+                    SnowDescText.Text = myCityWeather.trip.chance_of.chanceofsnowday.description.ToString();
+                    SnowNameText.Text = myCityWeather.trip.chance_of.chanceofsnowday.percentage.ToString() + " %";
+
+                    //Fog
+                    FogText.Text = myCityWeather.trip.chance_of.chanceoffogday.name.ToString();
+                    FogDescText.Text = myCityWeather.trip.chance_of.chanceoffogday.description.ToString();
+                    FogNameText.Text = myCityWeather.trip.chance_of.chanceoffogday.percentage.ToString() + " %";
+
+                    //freezing
+                    FreezingText.Text = myCityWeather.trip.chance_of.tempbelowfreezing.name.ToString();
+                    //FreezingDescText.Text = myCityWeather.trip.chance_of.tempbelowfreezing.description.ToString();
+                    FreezingNameText.Text = myCityWeather.trip.chance_of.tempbelowfreezing.percentage.ToString() + " %";
+
+                    HighTempText.Text = myCityWeather.trip.chance_of.tempoverninety.name.ToString();
+                    HighTempDescText.Text = myCityWeather.trip.chance_of.tempoverninety.description.ToString();
+                    HighTempNameText.Text = myCityWeather.trip.chance_of.tempoverninety.percentage.ToString();
+
+                    MyProgressRing.IsActive = false;
+                    MyProgressRing.Visibility = Visibility.Collapsed;
+
+                    CityTextBox.PlaceholderText = "Enter City Name";
+                }
+
+            }
+
+           
 
         }
     }

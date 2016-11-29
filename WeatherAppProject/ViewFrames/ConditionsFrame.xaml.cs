@@ -37,45 +37,54 @@ namespace WeatherAppProject.ViewFrames
 
         private async void ConditionsButton_Click(object sender, RoutedEventArgs e)
         {
-            var city = CityTextBox.Text.ToString();
-            city = city.Replace(" ", "_");
-            var cityToUpper = FirstCharToUpper(city);
-            var country = countryCombo.SelectedValue.ToString();
-
-            MyProgressRing.IsActive = true;
-            MyProgressRing.Visibility = Visibility.Visible;
-
-            RootObject myCityWeather = await WeatherFacade.GetWeatherConditions(country, cityToUpper);
-            //Grid.Row 1
-            //LocationResultText.Text = myCityWeather.current_observation.display_location.full.ToString();
-            if (myCityWeather.current_observation == null)
+            if (CityTextBox.Text == "" && countryCombo.SelectedValue == null)
             {
-                CityTextBox.Text = "";
-                CityTextBox.PlaceholderText = "Re-enter City Name";
-
-                MyProgressRing.IsActive = false;
-                MyProgressRing.Visibility = Visibility.Collapsed;
+                CityTextBox.PlaceholderText = "ENTER CITY NAME";
+                countryCombo.PlaceholderText = "SELECT COUNTRY";
             }
             else
             {
-                CurrentTimeText.Text = myCityWeather.current_observation.local_time_rfc822.ToString();
 
-                MinTempText.Text = myCityWeather.current_observation.temperature_string.ToString();
+                var city = CityTextBox.Text.ToString();
+                city = city.Replace(" ", "_");
+                var cityToUpper = FirstCharToUpper(city);
+                var country = countryCombo.SelectedValue.ToString();
 
-                string icon = String.Format(myCityWeather.current_observation.icon_url);
-                PressureImage.Source = new BitmapImage(new Uri(icon, UriKind.Absolute));
+                MyProgressRing.IsActive = true;
+                MyProgressRing.Visibility = Visibility.Visible;
 
-                //Grid.Row 2
-                WindSpeedext.Text = myCityWeather.current_observation.wind_string.ToString();
-                PrecipText.Text = myCityWeather.current_observation.precip_today_string.ToString();
-                WindImage.Source = new BitmapImage(new Uri(icon, UriKind.Absolute));
+                RootObject myCityWeather = await WeatherFacade.GetWeatherConditions(country, cityToUpper);
+                //Grid.Row 1
+                
+                if (myCityWeather.current_observation == null)
+                {
+                    CityTextBox.Text = "";
+                    CityTextBox.PlaceholderText = "Re-enter City Name";
 
-                MyProgressRing.IsActive = false;
-                MyProgressRing.Visibility = Visibility.Collapsed;
+                    MyProgressRing.IsActive = false;
+                    MyProgressRing.Visibility = Visibility.Collapsed;
+                }
+                else
+                {
+                    LocationResultText.Text = myCityWeather.current_observation.display_location.full.ToString();
+                    CurrentTimeText.Text = myCityWeather.current_observation.local_time_rfc822.ToString();
 
-                CityTextBox.PlaceholderText = "Enter City Name";
-            }    
-              
+                    MinTempText.Text = myCityWeather.current_observation.temperature_string.ToString();
+
+                    string icon = String.Format(myCityWeather.current_observation.icon_url);
+                    PressureImage.Source = new BitmapImage(new Uri(icon, UriKind.Absolute));
+
+                    //Grid.Row 2
+                    WindSpeedext.Text = myCityWeather.current_observation.wind_string.ToString();
+                    PrecipText.Text = myCityWeather.current_observation.precip_today_string.ToString();
+                    WindImage.Source = new BitmapImage(new Uri(icon, UriKind.Absolute));
+
+                    MyProgressRing.IsActive = false;
+                    MyProgressRing.Visibility = Visibility.Collapsed;
+
+                    CityTextBox.PlaceholderText = "Enter City Name";
+                }
+            }
 
 
         }

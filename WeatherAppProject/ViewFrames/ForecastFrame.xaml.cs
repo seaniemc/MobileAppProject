@@ -38,22 +38,29 @@ namespace WeatherAppProject.ViewFrames
 
         private async void ConditionsButton_Click(object sender, RoutedEventArgs e)
         {
-            var city = CityTextBox.Text.ToString();
-            var country = countryCombo.SelectedValue.ToString();
-
-            MyProgressRing.IsActive = true;
-            MyProgressRing.Visibility = Visibility.Visible;
-
-            RootObject myCityWeather = await WeatherFacade.GetWeatherForecast(country, city);
-
-          //  myCityWeather.forecast.txt_forecast.date.ToString();
-
-
-
-            foreach (var day in myCityWeather.forecast.txt_forecast.forecastday)
+            if (CityTextBox.Text == "" && countryCombo.SelectedValue == null)
             {
-                day.title.ToString();
+                CityTextBox.PlaceholderText = "ENTER CITY NAME";
+                countryCombo.PlaceholderText = "SELECT COUNTRY";
             }
+            else
+            {
+                var city = CityTextBox.Text.ToString();
+                var country = countryCombo.SelectedValue.ToString();
+
+                MyProgressRing.IsActive = true;
+                MyProgressRing.Visibility = Visibility.Visible;
+
+                RootObject myCityWeather = await WeatherFacade.GetWeatherForecast(country, city);
+
+                //  myCityWeather.forecast.txt_forecast.date.ToString();
+
+            }
+
+            //foreach (var day in myCityWeather.forecast.txt_forecast.forecastday)
+            //{
+            //    day.title.ToString();
+            //}
 
         }
         //public static void CreateTxtForcast( forecastList)
