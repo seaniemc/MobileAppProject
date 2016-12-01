@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using WeatherAppProject.Data;
 using WeatherAppProject.Model;
 using WeatherAppProject.ViewModel;
 using Windows.Foundation;
@@ -54,7 +55,7 @@ namespace WeatherAppProject.ViewFrames
                 MyProgressRing.IsActive = true;
                 MyProgressRing.Visibility = Visibility.Visible;
 
-                RootObject myCityWeather = await WeatherFacade.GetWeatherForecast(country, city);
+                ForeCastRootObject myCityWeather = await WeatherFacade.GetWeatherForecastData(country, city);
 
                 //  myCityWeather.forecast.txt_forecast.date.ToString();
 

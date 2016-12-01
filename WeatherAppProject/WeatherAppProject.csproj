@@ -96,6 +96,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Convertors\ObjectsExsistToVisible.cs" />
+    <Compile Include="Data\ForecastRootObj.cs" />
     <Compile Include="ViewFrames\AstronomyFrame.xaml.cs">
       <DependentUpon>AstronomyFrame.xaml</DependentUpon>
     </Compile>
