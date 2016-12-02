@@ -32,8 +32,7 @@ namespace WeatherAppProject
                
         }
 
-     
-
+ 
         public async static Task<RootObject> GetWeatherConditions(string countryCode, string city)
         {
             

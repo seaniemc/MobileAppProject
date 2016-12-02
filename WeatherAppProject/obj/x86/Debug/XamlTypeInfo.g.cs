@@ -277,6 +277,7 @@ namespace WeatherAppProject.WeatherAppProject_XamlTypeInfo
             case 10:   //  WeatherAppProject.ViewFrames.WebcamFrame
                 userType = new global::WeatherAppProject.WeatherAppProject_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_10_WebcamFrame;
+                userType.AddMemberName("ReadInFile");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -325,6 +326,16 @@ namespace WeatherAppProject.WeatherAppProject_XamlTypeInfo
             var that = (global::WeatherAppProject.ViewFrames.ForecastFrame)instance;
             that.ReadInFile = (global::WeatherAppProject.ViewModel.CountryCodesVM)Value;
         }
+        private object get_4_WebcamFrame_ReadInFile(object instance)
+        {
+            var that = (global::WeatherAppProject.ViewFrames.WebcamFrame)instance;
+            return that.ReadInFile;
+        }
+        private void set_4_WebcamFrame_ReadInFile(object instance, object Value)
+        {
+            var that = (global::WeatherAppProject.ViewFrames.WebcamFrame)instance;
+            that.ReadInFile = (global::WeatherAppProject.ViewModel.CountryCodesVM)Value;
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
@@ -356,6 +367,12 @@ namespace WeatherAppProject.WeatherAppProject_XamlTypeInfo
                 xamlMember = new global::WeatherAppProject.WeatherAppProject_XamlTypeInfo.XamlMember(this, "ReadInFile", "WeatherAppProject.ViewModel.CountryCodesVM");
                 xamlMember.Getter = get_3_ForecastFrame_ReadInFile;
                 xamlMember.Setter = set_3_ForecastFrame_ReadInFile;
+                break;
+            case "WeatherAppProject.ViewFrames.WebcamFrame.ReadInFile":
+                userType = (global::WeatherAppProject.WeatherAppProject_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WeatherAppProject.ViewFrames.WebcamFrame");
+                xamlMember = new global::WeatherAppProject.WeatherAppProject_XamlTypeInfo.XamlMember(this, "ReadInFile", "WeatherAppProject.ViewModel.CountryCodesVM");
+                xamlMember.Getter = get_4_WebcamFrame_ReadInFile;
+                xamlMember.Setter = set_4_WebcamFrame_ReadInFile;
                 break;
             }
             return xamlMember;

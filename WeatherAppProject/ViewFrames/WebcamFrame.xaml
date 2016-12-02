@@ -8,6 +8,41 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        <ScrollViewer>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <StackPanel Margin="10,15,0,0" Orientation="Vertical" HorizontalAlignment="Left">
+                    <ComboBox Name="countryCombo"
+                              PlaceholderText="Select Country"
+                              ItemsSource="{x:Bind ReadInFile.CountryCodes, Mode=OneWay}"
+                              SelectedIndex="{x:Bind ReadInFile.SelectedIndex}"
+                              DisplayMemberPath="Name"
+                              SelectedValuePath="Code"
+                              MinWidth="250">
+                    </ComboBox>
+                </StackPanel>
+                <StackPanel  Margin="0,15,0,0" 
+                             Orientation="Vertical" 
+                             Grid.Column="1" 
+                             HorizontalAlignment="Center">
+                    <TextBox Name="CityTextBox" 
+                             PlaceholderText="Enter City Name"
+                             FontSize="18"/>
+                    <Button Name="ConditionsButton" 
+                            Content=" FIND"
+                            Click="ConditionsButton_Click">
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </ScrollViewer>
     </Grid>
 </Page>

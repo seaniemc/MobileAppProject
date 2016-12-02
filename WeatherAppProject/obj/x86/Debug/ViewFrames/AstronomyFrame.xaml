@@ -15,16 +15,16 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         
            
         <StackPanel Margin="10,15,0,0" Orientation="Vertical" HorizontalAlignment="Center">
-            <ComboBox x:ConnectionId='32' Name="countryCombo"
+            <ComboBox x:ConnectionId='20' Name="countryCombo"
                       PlaceholderText="Select Country"
                                                                                  
                                                                        
@@ -37,151 +37,105 @@
                      Orientation="Vertical" 
                      Grid.Column="2" 
                      HorizontalAlignment="Center">
-            <TextBox x:ConnectionId='31' Name="CityTextBox" 
+            <TextBox x:ConnectionId='19' Name="CityTextBox" 
                      PlaceholderText="Enter City Name"
                      FontSize="18"/>
         </StackPanel>
         <StackPanel  Margin="10,15,10,0" Grid.Column="1" Grid.Row="0" Orientation="Vertical" HorizontalAlignment="Center">
-            <Button x:ConnectionId='29' Name="ConditionsButton" 
+            <Button x:ConnectionId='17' Name="ConditionsButton" 
                     Content=" FIND" 
                                                   >
             </Button>
-            <TextBlock x:ConnectionId='30' Name="WeatherResultCityText"></TextBlock>
+            <TextBlock x:ConnectionId='18' Name="WeatherResultCityText"></TextBlock>
         </StackPanel>
         <StackPanel Margin="10,15,0,0" 
                     HorizontalAlignment="Left"
                     Grid.Row="1" Grid.Column="0">
             <TextBlock FontSize="20">Rain</TextBlock>
-            <TextBlock x:ConnectionId='26' Margin="0,10,0,0" 
-                       Name="RainText" 
-                       TextWrapping="Wrap"
-                       FontSize="18">
-            </TextBlock>
-            <TextBlock x:ConnectionId='27' Margin="0,10,0,0" 
+            <TextBlock x:ConnectionId='16' Margin="0,10,0,0" 
                        Name="RainDecText" 
                        FontSize="18"
                        TextWrapping="Wrap">
             </TextBlock>
-            <TextBlock x:ConnectionId='28' Margin="0,10,0,0" 
-                       Name="RainNameText" 
-                       FontSize="18"
-                       TextWrapping="Wrap">
-            </TextBlock>
         </StackPanel>
-        <StackPanel Margin="10,15,0,0" Orientation="Vertical" 
+        <StackPanel Margin="0,10,0,0" Orientation="Vertical" 
                     HorizontalAlignment="Center" 
-                    Grid.Row="1" Grid.Column="1">
-            <TextBlock FontSize="20" TextWrapping="Wrap">Wind</TextBlock>
-            <TextBlock x:ConnectionId='24' Margin="0,15,0,0" 
+                    Grid.Row="1" 
+                    Grid.Column="1">
+            <TextBlock FontSize="20" 
+                       TextWrapping="Wrap">Wind</TextBlock>
+            <TextBlock x:ConnectionId='15' Margin="0,10,0,0" 
                        FontSize="18" 
                        Name="WindText" 
                        TextWrapping="Wrap"/>
-            <TextBlock x:ConnectionId='25' FontSize="18" 
-                       Name="WindNameText" 
-                       TextWrapping="Wrap"/>
         </StackPanel>
-        <StackPanel Orientation="Vertical" 
+        <StackPanel Orientation="Vertical"
+                     Margin="0,10,0,0"
                     HorizontalAlignment="Center" 
                     Grid.Row="1" 
                     Grid.Column="2">
             <TextBlock FontSize="20">Clouds</TextBlock>
-            <TextBlock x:ConnectionId='21' Margin="0,15,0,0" 
-                       FontSize="18" 
-                       Name="CloudTempText" 
-                       TextWrapping="Wrap"/>
-            <TextBlock x:ConnectionId='22' FontSize="18" 
+            <TextBlock x:ConnectionId='14' FontSize="18" 
                        Name="MostlyCloudsDescText" 
-                       TextWrapping="Wrap"/>
-            <TextBlock x:ConnectionId='23' FontSize="18" 
-                       Name="MostlyCloudsText" 
                        TextWrapping="Wrap"/>
         </StackPanel>
         <!-- Grid.Row 2 -->
-        <StackPanel Margin="10,15,0,0" 
+        <StackPanel Margin="0,10,0,0" 
                     HorizontalAlignment="Left" 
                     Grid.Row="2" Grid.Column="0">
             <TextBlock FontSize="22" 
                        TextWrapping="Wrap">Snow</TextBlock>
-            <TextBlock x:ConnectionId='18' Margin="0,10,0,0" 
-                       Name="SnowText" 
-                       FontSize="18"
-                        TextWrapping="Wrap">
-            </TextBlock>
-            <TextBlock x:ConnectionId='19' FontSize="18" 
+
+            <TextBlock x:ConnectionId='13' FontSize="18" 
                        Name="SnowDescText" 
-                       TextWrapping="Wrap"/>
-            <TextBlock x:ConnectionId='20' Margin="0,10,0,0" 
-                       Name="SnowNameText" 
-                       FontSize="18"
                        TextWrapping="Wrap">
-                
             </TextBlock>
         </StackPanel>
-        <StackPanel Margin="10,15,0,0" Orientation="Vertical" 
+        <StackPanel Margin="0,10,0,0" Orientation="Vertical" 
                     HorizontalAlignment="Center" 
                     Grid.Row="2" Grid.Column="1" >
             <TextBlock FontSize="20" TextWrapping="Wrap"> Fog</TextBlock>
-            <TextBlock x:ConnectionId='15' Margin="0,15,0,0" 
-                       FontSize="18" 
-                       Name="FogText" 
-                       TextWrapping="Wrap"/>
-            <TextBlock x:ConnectionId='16' FontSize="18" 
+            <TextBlock x:ConnectionId='12' FontSize="18" 
                        Name="FogDescText" 
-                       TextWrapping="Wrap"/>
-            <TextBlock x:ConnectionId='17' Margin="0,15,0,0" 
-                       FontSize="18" 
-                       Name="FogNameText" 
                        TextWrapping="Wrap"/>
         </StackPanel>
         <StackPanel Orientation="Vertical"  
                     HorizontalAlignment="Center" 
                     Grid.Row="2" Grid.Column="2">
             <TextBlock FontSize="20" TextWrapping="Wrap"> Freezing</TextBlock>
-            <TextBlock x:ConnectionId='12' Margin="0,15,0,0" 
-                       FontSize="18" 
-                       Name="FreezingText" 
-                       TextWrapping="Wrap"/>
-            <TextBlock x:ConnectionId='13' FontSize="18" 
-                       Name="FreezingDescText" 
-                       TextWrapping="Wrap"/>
-            <TextBlock x:ConnectionId='14' Margin="0,15,0,0" 
+            <TextBlock x:ConnectionId='11' Margin="0,10,0,0" 
                        FontSize="18" 
                        Name="FreezingNameText" 
                        TextWrapping="Wrap"/>
         </StackPanel>
-        <StackPanel Margin="10,15,0,0" 
+        <StackPanel Margin="0,10,0,0" 
                     HorizontalAlignment="Left" 
                     Grid.Row="3" Grid.Column="0">
             <TextBlock FontSize="22" 
                        TextWrapping="Wrap">High Tempature</TextBlock>
-            <TextBlock x:ConnectionId='9' Margin="0,10,0,0" 
-                       Name="HighTempText" 
-                       FontSize="18"
-                        TextWrapping="Wrap">
-            </TextBlock>
-            <TextBlock x:ConnectionId='10' FontSize="18" 
+            <TextBlock x:ConnectionId='9' FontSize="18" 
                        Name="HighTempDescText" 
                        TextWrapping="Wrap"/>
-            <TextBlock x:ConnectionId='11' Margin="0,10,0,0" 
+            <TextBlock x:ConnectionId='10' Margin="0,10,0,0" 
                        Name="HighTempNameText" 
                        FontSize="18"
                        TextWrapping="Wrap">
 
             </TextBlock>
         </StackPanel>
-        <StackPanel Margin="10,15,0,0" Orientation="Vertical" 
+        <StackPanel Margin="0,10,0,0" Orientation="Vertical" 
                     HorizontalAlignment="Center" 
                     Grid.Row="3" Grid.Column="1" >
             <TextBlock FontSize="20" TextWrapping="Wrap">Mid Tempature</TextBlock>
-            <TextBlock x:ConnectionId='6' Margin="0,15,0,0" 
+            <TextBlock x:ConnectionId='6' Margin="0,10,0,0" 
                        FontSize="18" 
                        Name="MidTempText" 
                        TextWrapping="Wrap"/>
-            <TextBlock x:ConnectionId='7' Margin="0,15,0,0" 
+            <TextBlock x:ConnectionId='7' Margin="0,10,0,0" 
                        FontSize="18" 
                        Name="MidTempDescText" 
                        TextWrapping="Wrap"/>
-            <TextBlock x:ConnectionId='8' Margin="0,15,0,0" 
+            <TextBlock x:ConnectionId='8' Margin="0,10,0,0" 
                        FontSize="18" 
                        Name="MidTempNameText" 
                        TextWrapping="Wrap"/>
@@ -190,15 +144,15 @@
                     HorizontalAlignment="Center" 
                     Grid.Row="3" Grid.Column="2">
             <TextBlock FontSize="20" TextWrapping="Wrap"> Warm Temp</TextBlock>
-            <TextBlock x:ConnectionId='3' Margin="0,15,0,0" 
+            <TextBlock x:ConnectionId='3' Margin="0,10,0,0" 
                        FontSize="18" 
                        Name="WarmTempText" 
                        TextWrapping="Wrap"/>
-            <TextBlock x:ConnectionId='4' Margin="0,15,0,0" 
+            <TextBlock x:ConnectionId='4' Margin="0,10,0,0" 
                        FontSize="18" 
                        Name="WarmTempDescText" 
                        TextWrapping="Wrap"/>
-            <TextBlock x:ConnectionId='5' Margin="0,15,0,0" 
+            <TextBlock x:ConnectionId='5' Margin="0,10,0,0" 
                        FontSize="18" 
                        Name="WarmTempNameText" 
                        TextWrapping="Wrap"/>

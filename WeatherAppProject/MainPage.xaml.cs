@@ -77,7 +77,7 @@ namespace WeatherAppProject
             else if (Astronomy.IsSelected)
             {
                 MyFrame.Navigate(typeof(AstronomyFrame));
-                TitleTextBlock.Text = "Astronomy";
+                TitleTextBlock.Text = "Chance's Of";
             }
             else if (Webcam.IsSelected)
             {
