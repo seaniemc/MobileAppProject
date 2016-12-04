@@ -52,8 +52,8 @@ namespace WeatherAppProject.ViewFrames
                 var cityToUpper = Conditions.FirstCharToUpper(city);
                 var country = countryCombo.SelectedValue.ToString();
 
-                MyProgressRing.IsActive = true;
-                MyProgressRing.Visibility = Visibility.Visible;
+               // MyProgressRing.IsActive = true;
+                //MyProgressRing.Visibility = Visibility.Visible;
 
                 ForeCastRootObject myCityWeather = await WeatherFacade.GetWeatherForecastData(country, city);
 
@@ -64,8 +64,8 @@ namespace WeatherAppProject.ViewFrames
                     CityTextBox.Text = "";
                     CityTextBox.PlaceholderText = "Re-enter City Name";
 
-                    MyProgressRing.IsActive = false;
-                    MyProgressRing.Visibility = Visibility.Collapsed;
+                    //MyProgressRing.IsActive = false;
+                    //MyProgressRing.Visibility = Visibility.Collapsed;
                 }
                 else
                 {
@@ -78,6 +78,7 @@ namespace WeatherAppProject.ViewFrames
                         txtForecastList.Add(day.icon_url.ToString());
 
                     }
+
                     Day1Text.Text = txtForecastList[0].ToString();
                     Forecast1Text.Text = txtForecastList[1].ToString();
                     string icon = String.Format(txtForecastList[2].ToString());
@@ -113,8 +114,13 @@ namespace WeatherAppProject.ViewFrames
                     icon = String.Format(txtForecastList[20].ToString());
                     Weather7Image.Source = new BitmapImage(new Uri(icon, UriKind.Absolute));
 
-                    MyProgressRing.IsActive = false;
-                    MyProgressRing.Visibility = Visibility.Collapsed;
+                    Day8Text.Text = txtForecastList[21].ToString();
+                    Forecast8Text.Text = txtForecastList[22].ToString();
+                    icon = String.Format(txtForecastList[23].ToString());
+                    Weather8Image.Source = new BitmapImage(new Uri(icon, UriKind.Absolute));
+
+                    //MyProgressRing.IsActive = false;
+                   //MyProgressRing.Visibility = Visibility.Collapsed;
 
                     CityTextBox.PlaceholderText = "Enter City Name";
                     
