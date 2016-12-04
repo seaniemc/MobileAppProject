@@ -16,13 +16,14 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <StackPanel Margin="10,15,0,0" Orientation="Vertical" HorizontalAlignment="Center">
             <ComboBox x:ConnectionId='14' Name="countryCombo"
+                      
                       PlaceholderText="Select Country"
                                                                                  
                                                                        
@@ -52,11 +53,13 @@
                     Grid.Row="1" Grid.Column="0">
             <TextBlock FontSize="20">Location</TextBlock>
             <TextBlock x:ConnectionId='9' Margin="0,10,0,0" 
-                       Name="LocationResultText" 
+                       Name="LocationResultText"
+                       TextWrapping="Wrap"
                        FontSize="18">
             </TextBlock>
             <TextBlock x:ConnectionId='10' Margin="0,10,0,0" 
                        Name="CurrentTimeText" 
+                       TextWrapping="Wrap"
                        FontSize="18">
             </TextBlock>
         </StackPanel>
@@ -65,9 +68,11 @@
                     Grid.Row="1" Grid.Column="1">
             <TextBlock FontSize="20">Tempature</TextBlock>
             <TextBlock x:ConnectionId='7' Margin="0,15,0,0" 
-                       FontSize="18" Name="MinTempText" />
+                       FontSize="18" Name="MinTempText" 
+                       TextWrapping="Wrap"/>
             <TextBlock x:ConnectionId='8' FontSize="18" 
-                       Name="MaxTempText" />
+                       Name="MaxTempText" 
+                        TextWrapping="Wrap"/>
         </StackPanel>
         <StackPanel Orientation="Vertical" 
                     HorizontalAlignment="Center" 
@@ -75,7 +80,8 @@
                     Grid.Column="2">
             <Image x:ConnectionId='6' Name="PressureImage" 
                    Width="125" 
-                   Height="125"/>
+                   Height="125"
+                   />
         </StackPanel>
         <!-- Grid.Row 2 -->
         <StackPanel Margin="10,15,0,0" 
@@ -84,7 +90,8 @@
             <TextBlock FontSize="22">Wind Speeds</TextBlock>
             <TextBlock x:ConnectionId='5' Margin="0,10,0,0" 
                        Name="WindSpeedext" 
-                       FontSize="18"></TextBlock>
+                       FontSize="18"
+                        TextWrapping="Wrap"></TextBlock>
         </StackPanel>
         <StackPanel Margin="10,15,0,0" Orientation="Vertical" 
                     HorizontalAlignment="Center" 
@@ -92,14 +99,16 @@
             <TextBlock FontSize="20">Precipation</TextBlock>
             <TextBlock x:ConnectionId='4' Margin="0,15,0,0" 
                        FontSize="18" 
-                       Name="PrecipText" />
+                       Name="PrecipText" 
+                       TextWrapping="Wrap"/>
         </StackPanel>
         <StackPanel Orientation="Vertical"  
                     HorizontalAlignment="Center" 
                     Grid.Row="2" Grid.Column="2">
             <Image x:ConnectionId='3' Name="WindImage" 
                    Width="125" 
-                   Height="125"/>
+                   Height="125"
+                   />
         </StackPanel>
         <StackPanel Orientation="Vertical" 
                     HorizontalAlignment="Center" 

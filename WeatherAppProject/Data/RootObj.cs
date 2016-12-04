@@ -167,123 +167,10 @@ namespace WeatherAppProject.Model
         public List<Forecastday> forecastday { get; set; }
     }
 
-    public class Date
-    {
-        public string epoch { get; set; }
-        public string pretty { get; set; }
-        public int day { get; set; }
-        public int month { get; set; }
-        public int year { get; set; }
-        public int yday { get; set; }
-        public int hour { get; set; }
-        public string min { get; set; }
-        public int sec { get; set; }
-        public string isdst { get; set; }
-        public string monthname { get; set; }
-        public string weekday_short { get; set; }
-        public string weekday { get; set; }
-        public string ampm { get; set; }
-        public string tz_short { get; set; }
-        public string tz_long { get; set; }
-    }
-
-    public class High
-    {
-        public string fahrenheit { get; set; }
-        public string celsius { get; set; }
-    }
-
-    public class Low
-    {
-        public string fahrenheit { get; set; }
-        public string celsius { get; set; }
-    }
-
-    public class QpfAllday
-    {
-        public double @in { get; set; }
-        public double mm { get; set; }
-    }
-
-    public class QpfDay
-    {
-        public double @in { get; set; }
-        public double mm { get; set; }
-    }
-
-    public class QpfNight
-    {
-        public double @in { get; set; }
-        public double mm { get; set; }
-    }
-
-    public class SnowAllday
-    {
-        public int @in { get; set; }
-        public int cm { get; set; }
-    }
-
-    public class SnowDay
-    {
-        public int @in { get; set; }
-        public int cm { get; set; }
-    }
-
-    public class SnowNight
-    {
-        public int @in { get; set; }
-        public int cm { get; set; }
-    }
-
-    public class Maxwind
-    {
-        public int mph { get; set; }
-        public int kph { get; set; }
-        public string dir { get; set; }
-        public int degrees { get; set; }
-    }
-
-    public class Avewind
-    {
-        public int mph { get; set; }
-        public int kph { get; set; }
-        public string dir { get; set; }
-        public int degrees { get; set; }
-    }
-
-    public class Forecastday2
-    {
-        public Date date { get; set; }
-        public int period { get; set; }
-        public High high { get; set; }
-        public Low low { get; set; }
-        public string conditions { get; set; }
-        public string icon { get; set; }
-        public string icon_url { get; set; }
-        public string skyicon { get; set; }
-        public int pop { get; set; }
-        public QpfAllday qpf_allday { get; set; }
-        public QpfDay qpf_day { get; set; }
-        public QpfNight qpf_night { get; set; }
-        public SnowAllday snow_allday { get; set; }
-        public SnowDay snow_day { get; set; }
-        public SnowNight snow_night { get; set; }
-        public Maxwind maxwind { get; set; }
-        public Avewind avewind { get; set; }
-        public int avehumidity { get; set; }
-        public int maxhumidity { get; set; }
-        public int minhumidity { get; set; }
-    }
-
-    public class Simpleforecast
-    {
-        public List<Forecastday2> forecastday { get; set; }
-    }
-
     public class Forecast
     {
         public TxtForecast txt_forecast { get; set; }
-        public Simpleforecast simpleforecast { get; set; }
+
     }
 
     //========================Geolookup=====================
@@ -346,31 +233,31 @@ namespace WeatherAppProject.Model
     }
     //=================Webcam====================================
 
-    public class Webcam
-    {
-        public string handle { get; set; }
-        public string camid { get; set; }
-        public string camindex { get; set; }
-        public string assoc_station_id { get; set; }
-        public string link { get; set; }
-        public string linktext { get; set; }
-        public string cameratype { get; set; }
-        public string organization { get; set; }
-        public string neighborhood { get; set; }
-        public string zip { get; set; }
-        public string city { get; set; }
-        public string state { get; set; }
-        public string country { get; set; }
-        public string tzname { get; set; }
-        public string lat { get; set; }
-        public string lon { get; set; }
-        public string updated { get; set; }
-        public string downloaded { get; set; }
-        public string isrecent { get; set; }
-        public string CURRENTIMAGEURL { get; set; }
-        public string WIDGETCURRENTIMAGEURL { get; set; }
-        public string CAMURL { get; set; }
-    }
+    //public class Webcam
+    //{
+    //    public string handle { get; set; }
+    //    public string camid { get; set; }
+    //    public string camindex { get; set; }
+    //    public string assoc_station_id { get; set; }
+    //    public string link { get; set; }
+    //    public string linktext { get; set; }
+    //    public string cameratype { get; set; }
+    //    public string organization { get; set; }
+    //    public string neighborhood { get; set; }
+    //    public string zip { get; set; }
+    //    public string city { get; set; }
+    //    public string state { get; set; }
+    //    public string country { get; set; }
+    //    public string tzname { get; set; }
+    //    public string lat { get; set; }
+    //    public string lon { get; set; }
+    //    public string updated { get; set; }
+    //    public string downloaded { get; set; }
+    //    public string isrecent { get; set; }
+    //    public string CURRENTIMAGEURL { get; set; }
+    //    public string WIDGETCURRENTIMAGEURL { get; set; }
+    //    public string CAMURL { get; set; }
+    //}
     //======================Planner =======================
     public class PlannerDate
     {
@@ -392,10 +279,10 @@ namespace WeatherAppProject.Model
         public string tz_long { get; set; }
     }
 
-    public class DateStart
-    {
-        public Date date { get; set; }
-    }
+    //public class DateStart
+    //{
+    //    public Date date { get; set; }
+    //}
 
     public class Date2
     {
@@ -424,7 +311,7 @@ namespace WeatherAppProject.Model
 
     public class PeriodOfRecord
     {
-        public DateStart date_start { get; set; }
+        //public DateStart date_start { get; set; }
         public DateEnd date_end { get; set; }
     }
 
@@ -729,6 +616,6 @@ namespace WeatherAppProject.Model
         public CurrentObservation current_observation { get; set; }
         public Forecast forecast { get; set; }
         public Location location { get; set; }
-        public List<Webcam> webcams { get; set; }
+        //public List<Webcam> webcams { get; set; }
     }
 }

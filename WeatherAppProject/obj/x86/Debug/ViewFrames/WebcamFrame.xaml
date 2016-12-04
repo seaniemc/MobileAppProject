@@ -19,9 +19,24 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
                 <StackPanel Margin="10,15,0,0" Orientation="Vertical" HorizontalAlignment="Left">
-                    <ComboBox x:ConnectionId='4' Name="countryCombo"
+                    <ComboBox x:ConnectionId='26' Name="countryCombo"
                               PlaceholderText="Select Country"
                                                                                          
                                                                                
@@ -34,13 +49,167 @@
                              Orientation="Vertical" 
                              Grid.Column="1" 
                              HorizontalAlignment="Center">
-                    <TextBox x:ConnectionId='2' Name="CityTextBox" 
+                    <TextBox x:ConnectionId='24' Name="CityTextBox" 
                              PlaceholderText="Enter City Name"
                              FontSize="18"/>
-                    <Button x:ConnectionId='3' Name="ConditionsButton" 
+                    <Button x:ConnectionId='25' Name="ConditionsButton" 
                             Content=" FIND"
                                                           >
                     </Button>
+                </StackPanel>
+                <StackPanel Margin="10,15,0,0" 
+                            HorizontalAlignment="Left"
+                            Grid.Row="1" Grid.Column="0">
+                    <TextBlock x:ConnectionId='22' Margin="0,10,0,0" 
+                               Name="Day1Text"
+                               TextWrapping="Wrap"
+                               FontSize="18">
+                    </TextBlock>
+                    <TextBlock x:ConnectionId='23' Margin="0,10,0,0" 
+                               Name="Forecast1Text" 
+                               TextWrapping="Wrap"
+                               FontSize="18">
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" 
+                            HorizontalAlignment="Center" 
+                            Grid.Row="1" 
+                            Grid.Column="1">
+                    <Image x:ConnectionId='21' Name="Weather1Image" 
+                           Width="125" 
+                           Height="125"/>
+                </StackPanel>
+                <!-- Grid.Row 2 -->
+                <StackPanel Margin="10,15,0,0" 
+                            HorizontalAlignment="Left" 
+                            Grid.Row="2" Grid.Column="0">
+                    <TextBlock x:ConnectionId='19' Margin="0,10,0,0" 
+                               Name="Day2Text"
+                               TextWrapping="Wrap"
+                               FontSize="18">
+                    </TextBlock>
+                    <TextBlock x:ConnectionId='20' Margin="0,10,0,0" 
+                               Name="Forecast2Text"
+                               TextWrapping="Wrap"
+                               FontSize="18"></TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Vertical"  
+                            HorizontalAlignment="Center" 
+                            Grid.Row="2" Grid.Column="1">
+                    <Image x:ConnectionId='18' Name="Weather2Image" 
+                           Width="125" 
+                           Height="125"/>
+                </StackPanel>
+                <StackPanel Margin="10,15,0,0" 
+                            HorizontalAlignment="Left" 
+                            Grid.Row="3" Grid.Column="0">
+                    <TextBlock x:ConnectionId='16' Margin="0,10,0,0" 
+                               Name="Day3Text"
+                               TextWrapping="Wrap"
+                               FontSize="18">
+                    </TextBlock>
+                    <TextBlock x:ConnectionId='17' Margin="0,10,0,0" 
+                               Name="Forecast3Text"
+                               TextWrapping="Wrap"
+                               FontSize="18"></TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Vertical"  
+                            HorizontalAlignment="Center" 
+                            Grid.Row="3" Grid.Column="1">
+                    <Image x:ConnectionId='15' Name="Weather3Image" 
+                           Width="125" 
+                           Height="125"/>
+                </StackPanel>
+                <StackPanel Margin="10,15,0,0" 
+                            HorizontalAlignment="Left" 
+                            Grid.Row="4" Grid.Column="0">
+                    <TextBlock x:ConnectionId='13' Margin="0,10,0,0" 
+                               Name="Day4Text"
+                               TextWrapping="Wrap"
+                               FontSize="18">
+                    </TextBlock>
+                    <TextBlock x:ConnectionId='14' Margin="0,10,0,0" 
+                               Name="Forecast4Text"
+                               TextWrapping="Wrap"
+                               FontSize="18"></TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Vertical"  
+                            HorizontalAlignment="Center" 
+                            Grid.Row="4" Grid.Column="1">
+                    <Image x:ConnectionId='12' Name="Weather4Image" 
+                           Width="125" 
+                           Height="125"/>
+                </StackPanel>
+                <StackPanel Margin="10,15,0,0" 
+                            HorizontalAlignment="Left" 
+                            Grid.Row="5" Grid.Column="0">
+                    <TextBlock x:ConnectionId='10' Margin="0,10,0,0" 
+                               Name="Day5Text"
+                               TextWrapping="Wrap"
+                               FontSize="18">
+                    </TextBlock>
+                    <TextBlock x:ConnectionId='11' Margin="0,10,0,0" 
+                               Name="Forecast5Text"
+                               TextWrapping="Wrap"
+                               FontSize="18"></TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Vertical"  
+                            HorizontalAlignment="Center" 
+                            Grid.Row="5" Grid.Column="1">
+                    <Image x:ConnectionId='9' Name="Weather5Image" 
+                           Width="125" 
+                           Height="125"/>
+                </StackPanel>
+                <StackPanel Margin="10,15,0,0" 
+                            HorizontalAlignment="Left" 
+                            Grid.Row="6" Grid.Column="0">
+                    <TextBlock x:ConnectionId='7' Margin="0,10,0,0" 
+                               Name="Day6Text"
+                               TextWrapping="Wrap"
+                               FontSize="18">
+                    </TextBlock>
+                    <TextBlock x:ConnectionId='8' Margin="0,10,0,0" 
+                               Name="Forecast6Text"
+                               TextWrapping="Wrap"
+                               FontSize="18"></TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Vertical"  
+                            HorizontalAlignment="Center" 
+                            Grid.Row="6" Grid.Column="1">
+                    <Image x:ConnectionId='6' Name="Weather6Image" 
+                           Width="125" 
+                           Height="125"/>
+                </StackPanel>
+                <StackPanel Margin="10,15,0,0" 
+                            HorizontalAlignment="Left" 
+                            Grid.Row="7" Grid.Column="0">
+                    <TextBlock x:ConnectionId='4' Margin="0,10,0,0" 
+                               Name="Day7Text"
+                               TextWrapping="Wrap"
+                               FontSize="18">
+                    </TextBlock>
+                    <TextBlock x:ConnectionId='5' Margin="0,10,0,0" 
+                               Name="Forecast7Text"
+                               TextWrapping="Wrap"
+                               FontSize="18"></TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Vertical"  
+                        HorizontalAlignment="Center" 
+                        Grid.Row="7" Grid.Column="1">
+                    <Image x:ConnectionId='3' Name="Weather7Image" 
+                       Width="125" 
+                       Height="125"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" 
+                        HorizontalAlignment="Center" 
+                        Grid.Row="8" 
+                        Grid.Column="1" >
+                    <ProgressRing x:ConnectionId='2' Name="MyProgressRing"
+                          Width="100"
+                          Height="100"
+                          Foreground="Gray"
+                          VerticalAlignment="Center"
+                          HorizontalAlignment="Center" />
                 </StackPanel>
             </Grid>
         </ScrollViewer>

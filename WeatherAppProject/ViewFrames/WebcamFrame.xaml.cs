@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using WeatherAppProject.Data;
 using WeatherAppProject.ViewModel;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -32,9 +33,9 @@ namespace WeatherAppProject.ViewFrames
         }
         public CountryCodesVM ReadInFile { get; set; }
 
-        private void ConditionsButton_Click(object sender, RoutedEventArgs e)
+        private async void ConditionsButton_Click(object sender, RoutedEventArgs e)
         {
-
+            ForeCastRootObject wheaterData = await WeatherFacade.GetWeather10DayForecast("IE", "Galway");
         }
     }
 }
