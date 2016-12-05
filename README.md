@@ -1,4 +1,4 @@
-# The Wheater App
+# The Weather App
 
 Student Name: Sean McGrath  
 Student ID: G00316649   
@@ -9,7 +9,7 @@ Lecturer: Martin Kenirons
 
 ##Introduction
 
-The Wheater App, is an app developed for the Universial Windows Platform. The app was a project assigned, as part of the Mobile Applications module. The Application consumes 2 API's to get the weather conditions. The first API is the [OpenWheaterMap](http://openweathermap.org/), this returns current conditions based on the Geo location of the device. The second is the [Wunderground](https://www.wunderground.com/), which returns wheater conditons based on the country selected and city entered by the user.  
+The Weather App, is an app developed for the Universial Windows Platform. The app was a project assigned, as part of the Mobile Applications module. The Application consumes 2 API's to get the weather conditions. The first API is the [OpenWheaterMap](http://openweathermap.org/), this returns current conditions based on the Geo location of the device. The second is the [Wunderground](https://www.wunderground.com/), which returns wheater conditons based on the country selected and city entered by the user.  
 When the app starts up, users are given the codnditions based on the their current location. The Application offers users the ability to retrieve data based on the Conditions, 4 Day Forecast, 10 Day Forecast And Chances's Of for any country on the list. 
 
 ##Project Structure and Architecture 
@@ -56,7 +56,7 @@ The [Wunderground](https://www.wunderground.com/) API is used to generate data b
 Sample URL used 
 ("http://api.wunderground.com/api/xxxxxxxxxxxxxxx/forecast/q/{0}/{1}.json", countryCode, city);
 
-Returned Json
+Sample of the Returned Json
 
 {
   "response": {
@@ -78,64 +78,7 @@ Returned Json
   "fcttext_metric": "Partly cloudy in the morning, then clear. High of 20C. Windy. Winds from the West at 20 to 35 km/h.",
   "pop": "0"
   }, {
-  "period": 1,
-  "icon": "partlycloudy",
-  "icon_url": "http://icons-ak.wxug.com/i/c/k/partlycloudy.gif",
-  "title": "Tuesday Night",
-  "fcttext": "Mostly cloudy. Fog overnight. Low of 50F. Winds from the WSW at 5 to 15 mph.",
-  "fcttext_metric": "Mostly cloudy. Fog overnight. Low of 10C. Breezy. Winds from the WSW at 10 to 20 km/h.",
-  "pop": "0"
-  }, {
-  "period": 2,
-  "icon": "partlycloudy",
-  "icon_url": "http://icons-ak.wxug.com/i/c/k/partlycloudy.gif",
-  "title": "Wednesday",
-  "fcttext": "Mostly cloudy. Fog early. High of 72F. Winds from the WSW at 10 to 15 mph.",
-  "fcttext_metric": "Mostly cloudy. Fog early. High of 22C. Breezy. Winds from the WSW at 15 to 20 km/h.",
-  "pop": "0"
-  }, {
-  "period": 3,
-  "icon": "mostlycloudy",
-  "icon_url": "http://icons-ak.wxug.com/i/c/k/mostlycloudy.gif",
-  "title": "Wednesday Night",
-  "fcttext": "Overcast. Fog overnight. Low of 54F. Winds from the WSW at 5 to 15 mph.",
-  "fcttext_metric": "Overcast. Fog overnight. Low of 12C. Breezy. Winds from the WSW at 10 to 20 km/h.",
-  "pop": "0"
-  }, {
-  "period": 4,
-  "icon": "partlycloudy",
-  "icon_url": "http://icons-ak.wxug.com/i/c/k/partlycloudy.gif",
-  "title": "Thursday",
-  "fcttext": "Overcast in the morning, then partly cloudy. Fog early. High of 72F. Winds from the WSW at 10 to 15 mph.",
-  "fcttext_metric": "Overcast in the morning, then partly cloudy. Fog early. High of 22C. Breezy. Winds from the WSW at 15 to 25 km/h.",
-  "pop": "0"
-  }, {
-  "period": 5,
-  "icon": "partlycloudy",
-  "icon_url": "http://icons-ak.wxug.com/i/c/k/partlycloudy.gif",
-  "title": "Thursday Night",
-  "fcttext": "Partly cloudy in the evening, then overcast. Fog overnight. Low of 54F. Winds from the WNW at 5 to 15 mph.",
-  "fcttext_metric": "Partly cloudy in the evening, then overcast. Fog overnight. Low of 12C. Breezy. Winds from the WNW at 10 to 20 km/h.",
-  "pop": "0"
-  }, {
-  "period": 6,
-  "icon": "partlycloudy",
-  "icon_url": "http://icons-ak.wxug.com/i/c/k/partlycloudy.gif",
-  "title": "Friday",
-  "fcttext": "Overcast in the morning, then partly cloudy. Fog early. High of 68F. Winds from the West at 5 to 15 mph.",
-  "fcttext_metric": "Overcast in the morning, then partly cloudy. Fog early. High of 20C. Breezy. Winds from the West at 10 to 20 km/h.",
-  "pop": "0"
-  }, {
-  "period": 7,
-  "icon": "partlycloudy",
-  "icon_url": "http://icons-ak.wxug.com/i/c/k/partlycloudy.gif",
-  "title": "Friday Night",
-  "fcttext": "Mostly cloudy. Fog overnight. Low of 52F. Winds from the West at 5 to 10 mph.",
-  "fcttext_metric": "Mostly cloudy. Fog overnight. Low of 11C. Winds from the West at 10 to 15 km/h.",
-  "pop": "0"
-  }]
-  },
-  
+   
 }
 ```
 
