@@ -23,4 +23,21 @@ The LocationManger.cs class, is responisible for generating the GPS coordinates 
 ###MainPage
 Holds the UI structure which is present throughout the project. The app uses the Hamburger Navigation model.
 
+##API Calls
+In the Applcation we use 2 different API's to collect data for the app.  
+
+###[OpenWheaterMap](http://openweathermap.org/)
+The [OpenWheaterMap](http://openweathermap.org/) is used to generate weather conditions based on the GPS oordinates of the device. 
+```
+URL used to make the call 
+
+http://api.openweathermap.org/data/2.5/weather?lat={0}&lon={1}&units=metric&appid=xxxxxxxxxxxxxxxxx", lat, lon
+
+Returned Json
+
+{"coord":{"lon":-9.05,"lat":53.27},"weather":[{"id":701,"main":"Mist","description":"mist","icon":"50n"}],"base":"stations","main":{"temp":8,"pressure":1019,"humidity":93,"temp_min":8,"temp_max":8},"visibility":2400,"wind":{"speed":4.6,"deg":100},"clouds":{"all":75},"dt":1480966200,"sys":{"type":1,"id":5240,"message":0.4568,"country":"IE","sunrise":1480926913,"sunset":1480954753},"id":2964180,"name":"Gaillimh","cod":200}
+
+```
+
+
 
