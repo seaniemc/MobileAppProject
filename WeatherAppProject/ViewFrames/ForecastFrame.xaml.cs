@@ -52,24 +52,18 @@ namespace WeatherAppProject.ViewFrames
                 var cityToUpper = Conditions.FirstCharToUpper(city);
                 var country = countryCombo.SelectedValue.ToString();
 
-               // MyProgressRing.IsActive = true;
-                //MyProgressRing.Visibility = Visibility.Visible;
 
                 ForeCastRootObject myCityWeather = await WeatherFacade.GetWeatherForecastData(country, city);
 
-                //  myCityWeather.forecast.txt_forecast.date.ToString();
 
                 if (myCityWeather.forecast == null)
                 {
                     CityTextBox.Text = "";
                     CityTextBox.PlaceholderText = "Re-enter City Name";
 
-                    //MyProgressRing.IsActive = false;
-                    //MyProgressRing.Visibility = Visibility.Collapsed;
                 }
                 else
                 {
-                    //Day1Text.Text = day.title.ToString();
                     foreach (var day in myCityWeather.forecast.txt_forecast.forecastday)
                     {
 
@@ -118,9 +112,6 @@ namespace WeatherAppProject.ViewFrames
                     Forecast8Text.Text = txtForecastList[22].ToString();
                     icon = String.Format(txtForecastList[23].ToString());
                     Weather8Image.Source = new BitmapImage(new Uri(icon, UriKind.Absolute));
-
-                    //MyProgressRing.IsActive = false;
-                   //MyProgressRing.Visibility = Visibility.Collapsed;
 
                     CityTextBox.PlaceholderText = "Enter City Name";
                     

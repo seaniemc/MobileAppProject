@@ -26,6 +26,8 @@
       <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.RelativePanel">
+      <RootProperty Name="Background" />
+      <RootProperty Name="BorderBrush" />
       <RootProperty Name="Children" />
       <RootMethod Name="GetAlignLeftWithPanel" />
       <RootMethod Name="SetAlignLeftWithPanel" />
@@ -42,6 +44,8 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListBox">
       <RootProperty Name="SelectionMode" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="BorderBrush" />
       <RootProperty Name="Items" />
       <RootEvent Name="SelectionChanged" />
     </RootType>
@@ -63,6 +67,7 @@
       <RootProperty Name="Inlines" />
       <RootProperty Name="Name" />
       <RootProperty Name="FontWeight" />
+      <RootProperty Name="FontStyle" />
       <RootProperty Name="TextWrapping" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Frame">
@@ -70,6 +75,8 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Name" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="BorderBrush" />
       <RootProperty Name="FontFamily" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="Content" />
@@ -83,7 +90,6 @@
       <RootMethod Name="GetVerticalScrollBarVisibility" />
       <RootMethod Name="SetVerticalScrollBarVisibility" />
     </RootType>
-    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
       <RootProperty Name="Width" />
     </RootType>

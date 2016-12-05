@@ -61,7 +61,7 @@ namespace WeatherAppProject.ViewFrames
                 }
                 else
                 {
-                    int i = 0;
+                    //int i = 0;
                     //string icon;
                     //Day1Text.Text = day.title.ToString();
                     foreach (var day in wheaterData.forecast.txt_forecast.forecastday)

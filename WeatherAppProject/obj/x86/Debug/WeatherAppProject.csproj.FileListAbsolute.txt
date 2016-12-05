@@ -217,4 +217,3 @@ C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherApp
 C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\obj\x86\Debug\ViewFrames\AstronomyFrame.g.cs
 C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\obj\x86\Debug\ViewFrames\AstronomyFrame.xaml
 C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\obj\x86\Debug\ViewFrames\AstronomyFrame.xbf
-C:\Users\Sean\Documents\Visual Studio 2015\Projects\WeatherAppProject\WeatherAppProject\obj\x86\Debug\WeatherAppProject.csprojResolveAssemblyReference.cache

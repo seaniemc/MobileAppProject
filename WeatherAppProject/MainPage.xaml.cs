@@ -32,7 +32,7 @@ namespace WeatherAppProject
             ReadInFile = new CountryCodesVM("CountryCodes");
 
             this.InitializeComponent();
-            BackButton.Visibility = Visibility.Collapsed;
+  
             MyFrame.Navigate(typeof(HomeFrame));
             TitleTextBlock.Text = "Current Weather";
             Home.IsSelected = true;
@@ -46,59 +46,37 @@ namespace WeatherAppProject
             MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
         }
 
-        private void BackButton_Click(object sender, RoutedEventArgs e)
-        {
-            //if (MyFrame.CanGoBack)
-            //{
-            //    MyFrame.GoBack();
-            //    Financial.IsSelected = true;
-            //}
-        }
+        
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (Home.IsSelected)
             {
-                BackButton.Visibility = Visibility.Collapsed;
-               MyFrame.Navigate(typeof(HomeFrame));
+                MyFrame.Navigate(typeof(HomeFrame));
                 TitleTextBlock.Text = "Current Weather";
             }
             else if (Condition.IsSelected)
             {
-                BackButton.Visibility = Visibility.Visible;
                 MyFrame.Navigate(typeof(Conditions));
                 TitleTextBlock.Text = "Conditions";
             }
             else if (Forecast.IsSelected)
             {
                 MyFrame.Navigate(typeof(ForecastFrame));
-                TitleTextBlock.Text = "Forecast";
-            } 
-            else if (Astronomy.IsSelected)
-            {
-                MyFrame.Navigate(typeof(AstronomyFrame));
-                TitleTextBlock.Text = "Chance's Of";
-            }
+                TitleTextBlock.Text = "4 Day Forecast";
+            }             
             else if (Webcam.IsSelected)
             {
                 MyFrame.Navigate(typeof(WebcamFrame));
-                TitleTextBlock.Text = "Webcams";
+                TitleTextBlock.Text = "10 Day Forecast";
+            }
+            else if (Astronomy.IsSelected)
+            {
+                MyFrame.Navigate(typeof(AstronomyFrame));
+                TitleTextBlock.Text = "Chance's Of %";
             }
         }
     }
-
-    //private async void WeatherButton_Click(object sender, RoutedEventArgs e)
-    //{
-    //    var position = await LocationManager.GetPosition();
-
-    //    OpenWeatherRootObject myWeather = await WeatherFacade.GetWeatherLatlon(
-    //        position.Coordinate.Latitude, position.Coordinate.Longitude);
-
-    //    WeatherResultText.Text = myWeather.name.ToString() + " -- " + myWeather.weather[0].description;
-
-    //}
-
-    
 
 }
 

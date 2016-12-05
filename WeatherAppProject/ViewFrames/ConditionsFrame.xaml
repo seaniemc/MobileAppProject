@@ -8,7 +8,7 @@
     xmlns:viewmodel="using:WeatherAppProject.ViewModel"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="#E1EAED" >
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -29,7 +29,7 @@
                       SelectedIndex="{x:Bind ReadInFile.SelectedIndex}"
                       DisplayMemberPath="Name"
                       SelectedValuePath="Code"
-                      MinWidth="250">
+                      MinWidth="200">
             </ComboBox>
         </StackPanel>
         <StackPanel  Margin="0,15,0,0" 
@@ -46,12 +46,13 @@
                     Content=" FIND" 
                     Click="ConditionsButton_Click">
             </Button>
-            <TextBlock Name="ErrorText"></TextBlock>
         </StackPanel>
         <StackPanel Margin="10,15,0,0" 
                     HorizontalAlignment="Left"
                     Grid.Row="1" Grid.Column="0">
-            <TextBlock FontSize="20">Location</TextBlock>
+            <TextBlock  FontSize="22"
+                        FontFamily="Selawik"
+                        FontStyle="Oblique">Location</TextBlock>
             <TextBlock Margin="0,10,0,0" 
                        Name="LocationResultText"
                        TextWrapping="Wrap"
@@ -66,7 +67,9 @@
         <StackPanel Margin="10,15,0,0" Orientation="Vertical" 
                     HorizontalAlignment="Center" 
                     Grid.Row="1" Grid.Column="1">
-            <TextBlock FontSize="20">Tempature</TextBlock>
+            <TextBlock  FontSize="22"
+                        FontFamily="Selawik"
+                        FontStyle="Oblique">Tempature</TextBlock>
             <TextBlock Margin="0,15,0,0" 
                        FontSize="18" Name="MinTempText" 
                        TextWrapping="Wrap"/>
@@ -87,7 +90,9 @@
         <StackPanel Margin="10,15,0,0" 
                     HorizontalAlignment="Left" 
                     Grid.Row="2" Grid.Column="0">
-            <TextBlock FontSize="22">Wind Speeds</TextBlock>
+            <TextBlock  FontSize="22"
+                        FontFamily="Selawik"
+                        FontStyle="Oblique">Wind Speeds</TextBlock>
             <TextBlock Margin="0,10,0,0" 
                        Name="WindSpeedext" 
                        FontSize="18"
@@ -96,7 +101,9 @@
         <StackPanel Margin="10,15,0,0" Orientation="Vertical" 
                     HorizontalAlignment="Center" 
                     Grid.Row="2" Grid.Column="1">
-            <TextBlock FontSize="20">Precipation</TextBlock>
+            <TextBlock  FontSize="22"
+                        FontFamily="Selawik"
+                        FontStyle="Oblique">Precipation</TextBlock>
             <TextBlock Margin="0,15,0,0" 
                        FontSize="18" 
                        Name="PrecipText" 

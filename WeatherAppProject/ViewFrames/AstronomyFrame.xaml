@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" >
+    <Grid Background="#E1EAED"  >
         
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -51,7 +51,9 @@
         <StackPanel Margin="10,15,0,0" 
                     HorizontalAlignment="Left"
                     Grid.Row="1" Grid.Column="0">
-            <TextBlock FontSize="20">Rain</TextBlock>
+            <TextBlock  FontSize="22"
+                        FontFamily="Selawik"
+                        FontStyle="Oblique">Rain</TextBlock>
             <TextBlock Margin="0,10,0,0" 
                        Name="RainDecText" 
                        FontSize="18"
@@ -62,7 +64,9 @@
                     HorizontalAlignment="Center" 
                     Grid.Row="1" 
                     Grid.Column="1">
-            <TextBlock FontSize="20" 
+            <TextBlock  FontSize="22"
+                        FontFamily="Selawik"
+                        FontStyle="Oblique" 
                        TextWrapping="Wrap">Wind</TextBlock>
             <TextBlock Margin="0,10,0,0" 
                        FontSize="18" 
@@ -74,7 +78,9 @@
                     HorizontalAlignment="Center" 
                     Grid.Row="1" 
                     Grid.Column="2">
-            <TextBlock FontSize="20">Clouds</TextBlock>
+            <TextBlock  FontSize="22"
+                        FontFamily="Selawik"
+                        FontStyle="Oblique">Clouds</TextBlock>
             <TextBlock FontSize="18" 
                        Name="MostlyCloudsDescText" 
                        TextWrapping="Wrap"/>
@@ -83,7 +89,9 @@
         <StackPanel Margin="0,10,0,0" 
                     HorizontalAlignment="Left" 
                     Grid.Row="2" Grid.Column="0">
-            <TextBlock FontSize="22" 
+            <TextBlock  FontSize="22"
+                        FontFamily="Selawik"
+                        FontStyle="Oblique"
                        TextWrapping="Wrap">Snow</TextBlock>
 
             <TextBlock FontSize="18" 
@@ -94,7 +102,10 @@
         <StackPanel Margin="0,10,0,0" Orientation="Vertical" 
                     HorizontalAlignment="Center" 
                     Grid.Row="2" Grid.Column="1" >
-            <TextBlock FontSize="20" TextWrapping="Wrap"> Fog</TextBlock>
+            <TextBlock  FontSize="22"
+                        FontFamily="Selawik"
+                        FontStyle="Oblique" 
+                        TextWrapping="Wrap"> Fog</TextBlock>
             <TextBlock FontSize="18" 
                        Name="FogDescText" 
                        TextWrapping="Wrap"/>
@@ -102,7 +113,10 @@
         <StackPanel Orientation="Vertical"  
                     HorizontalAlignment="Center" 
                     Grid.Row="2" Grid.Column="2">
-            <TextBlock FontSize="20" TextWrapping="Wrap"> Freezing</TextBlock>
+            <TextBlock  FontSize="22"
+                        FontFamily="Selawik"
+                        FontStyle="Oblique" 
+                       TextWrapping="Wrap"> Freezing</TextBlock>
             <TextBlock Margin="0,10,0,0" 
                        FontSize="18" 
                        Name="FreezingNameText" 
@@ -111,7 +125,9 @@
         <StackPanel Margin="0,10,0,0" 
                     HorizontalAlignment="Left" 
                     Grid.Row="3" Grid.Column="0">
-            <TextBlock FontSize="22" 
+            <TextBlock  FontSize="22"
+                        FontFamily="Selawik"
+                        FontStyle="Oblique"
                        TextWrapping="Wrap">High Tempature</TextBlock>
             <TextBlock FontSize="18" 
                        Name="HighTempDescText" 
@@ -126,7 +142,10 @@
         <StackPanel Margin="0,10,0,0" Orientation="Vertical" 
                     HorizontalAlignment="Center" 
                     Grid.Row="3" Grid.Column="1" >
-            <TextBlock FontSize="20" TextWrapping="Wrap">Mid Tempature</TextBlock>
+            <TextBlock  FontSize="22"
+                        FontFamily="Selawik"
+                        FontStyle="Oblique" 
+                        TextWrapping="Wrap">Mid Tempature</TextBlock>
             <TextBlock Margin="0,10,0,0" 
                        FontSize="18" 
                        Name="MidTempText" 
@@ -143,7 +162,10 @@
         <StackPanel Orientation="Vertical"  
                     HorizontalAlignment="Center" 
                     Grid.Row="3" Grid.Column="2">
-            <TextBlock FontSize="20" TextWrapping="Wrap"> Warm Temp</TextBlock>
+            <TextBlock  FontSize="22"
+                        FontFamily="Selawik"
+                        FontStyle="Oblique"
+                        TextWrapping="Wrap"> Warm Temp</TextBlock>
             <TextBlock Margin="0,10,0,0" 
                        FontSize="18" 
                        Name="WarmTempText" 

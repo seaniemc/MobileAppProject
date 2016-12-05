@@ -40,7 +40,7 @@ namespace WeatherAppProject
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
 #if DEBUG
-           
+
 #endif
             Frame rootFrame = Window.Current.Content as Frame;
 

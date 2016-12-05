@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="#E1EAED" >
         <ScrollViewer>
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -65,7 +65,9 @@
                     <TextBlock Margin="0,10,0,0" 
                                Name="Day1Text"
                                TextWrapping="Wrap"
-                               FontSize="18">
+                                FontSize="22"
+                               FontFamily="Selawik"
+                               FontStyle="Oblique">
                     </TextBlock>
                     <TextBlock Margin="0,10,0,0" 
                                Name="Forecast1Text" 
@@ -88,7 +90,9 @@
                     <TextBlock Margin="0,10,0,0" 
                                Name="Day2Text"
                                TextWrapping="Wrap"
-                               FontSize="18">
+                               FontSize="22"
+                               FontFamily="Selawik"
+                               FontStyle="Oblique">
                     </TextBlock>
                     <TextBlock Margin="0,10,0,0" 
                                Name="Forecast2Text"
@@ -108,7 +112,9 @@
                     <TextBlock Margin="0,10,0,0" 
                                Name="Day3Text"
                                TextWrapping="Wrap"
-                               FontSize="18">
+                               FontSize="22"
+                               FontFamily="Selawik"
+                               FontStyle="Oblique">
                     </TextBlock>
                     <TextBlock Margin="0,10,0,0" 
                                Name="Forecast3Text"
@@ -128,7 +134,9 @@
                     <TextBlock Margin="0,10,0,0" 
                                Name="Day4Text"
                                TextWrapping="Wrap"
-                               FontSize="18">
+                                FontSize="22"
+                               FontFamily="Selawik"
+                               FontStyle="Oblique">
                     </TextBlock>
                     <TextBlock Margin="0,10,0,0" 
                                Name="Forecast4Text"
@@ -148,7 +156,9 @@
                     <TextBlock Margin="0,10,0,0" 
                                Name="Day5Text"
                                TextWrapping="Wrap"
-                               FontSize="18">
+                                FontSize="22"
+                               FontFamily="Selawik"
+                               FontStyle="Oblique">
                     </TextBlock>
                     <TextBlock Margin="0,10,0,0" 
                                Name="Forecast5Text"
@@ -168,7 +178,9 @@
                     <TextBlock Margin="0,10,0,0" 
                                Name="Day6Text"
                                TextWrapping="Wrap"
-                               FontSize="18">
+                                FontSize="22"
+                               FontFamily="Selawik"
+                               FontStyle="Oblique">
                     </TextBlock>
                     <TextBlock Margin="0,10,0,0" 
                                Name="Forecast6Text"
@@ -188,7 +200,9 @@
                     <TextBlock Margin="0,10,0,0" 
                                Name="Day7Text"
                                TextWrapping="Wrap"
-                               FontSize="18">
+                                FontSize="22"
+                               FontFamily="Selawik"
+                               FontStyle="Oblique">
                     </TextBlock>
                     <TextBlock Margin="0,10,0,0" 
                                Name="Forecast7Text"
@@ -209,7 +223,9 @@
                     <TextBlock Margin="0,10,0,0" 
                                Name="Day8Text"
                                TextWrapping="Wrap"
-                               FontSize="18">
+                                FontSize="22"
+                               FontFamily="Selawik"
+                               FontStyle="Oblique">
                     </TextBlock>
                     <TextBlock Margin="0,10,0,0" 
                                Name="Forecast8Text" 
@@ -232,7 +248,9 @@
                     <TextBlock Margin="0,10,0,0" 
                                Name="Day9Text"
                                TextWrapping="Wrap"
-                               FontSize="18">
+                                FontSize="22"
+                               FontFamily="Selawik"
+                               FontStyle="Oblique">
                     </TextBlock>
                     <TextBlock Margin="0,10,0,0" 
                                Name="Forecast9Text"
@@ -252,7 +270,9 @@
                     <TextBlock Margin="0,10,0,0" 
                                Name="Day10Text"
                                TextWrapping="Wrap"
-                               FontSize="18">
+                                FontSize="22"
+                               FontFamily="Selawik"
+                               FontStyle="Oblique">
                     </TextBlock>
                     <TextBlock Margin="0,10,0,0" 
                                Name="Forecast10Text"
@@ -272,7 +292,9 @@
                     <TextBlock Margin="0,10,0,0" 
                                Name="Day11Text"
                                TextWrapping="Wrap"
-                               FontSize="18">
+                                FontSize="22"
+                               FontFamily="Selawik"
+                               FontStyle="Oblique">
                     </TextBlock>
                     <TextBlock Margin="0,10,0,0" 
                                Name="Forecast11Text"
@@ -292,7 +314,9 @@
                     <TextBlock Margin="0,10,0,0" 
                                Name="Day12Text"
                                TextWrapping="Wrap"
-                               FontSize="18">
+                                FontSize="22"
+                               FontFamily="Selawik"
+                               FontStyle="Oblique">
                     </TextBlock>
                     <TextBlock Margin="0,10,0,0" 
                                Name="Forecast12Text"
@@ -312,7 +336,9 @@
                     <TextBlock Margin="0,10,0,0" 
                                Name="Day13Text"
                                TextWrapping="Wrap"
-                               FontSize="18">
+                                FontSize="22"
+                               FontFamily="Selawik"
+                               FontStyle="Oblique">
                     </TextBlock>
                     <TextBlock Margin="0,10,0,0" 
                                Name="Forecast13Text"
@@ -332,7 +358,9 @@
                     <TextBlock Margin="0,10,0,0" 
                                Name="Day14Text"
                                TextWrapping="Wrap"
-                               FontSize="18">
+                                FontSize="22"
+                               FontFamily="Selawik"
+                               FontStyle="Oblique">
                     </TextBlock>
                     <TextBlock Margin="0,10,0,0" 
                                Name="Forecast14Text"
@@ -352,7 +380,9 @@
                     <TextBlock Margin="0,10,0,0" 
                                Name="Day15Text"
                                TextWrapping="Wrap"
-                               FontSize="18">
+                                FontSize="22"
+                               FontFamily="Selawik"
+                               FontStyle="Oblique">
                     </TextBlock>
                     <TextBlock Margin="0,10,0,0" 
                                Name="Forecast15Text"
@@ -372,7 +402,9 @@
                     <TextBlock Margin="0,10,0,0" 
                                Name="Day16Text"
                                TextWrapping="Wrap"
-                               FontSize="18">
+                                FontSize="22"
+                               FontFamily="Selawik"
+                               FontStyle="Oblique">
                     </TextBlock>
                     <TextBlock Margin="0,10,0,0" 
                                Name="Forecast16Text"
@@ -392,7 +424,9 @@
                     <TextBlock Margin="0,10,0,0" 
                                Name="Day17Text"
                                TextWrapping="Wrap"
-                               FontSize="18">
+                                FontSize="22"
+                               FontFamily="Selawik"
+                               FontStyle="Oblique">
                     </TextBlock>
                     <TextBlock Margin="0,10,0,0" 
                                Name="Forecast17Text"
@@ -412,7 +446,9 @@
                     <TextBlock Margin="0,10,0,0" 
                                Name="Day18Text"
                                TextWrapping="Wrap"
-                               FontSize="18">
+                                FontSize="22"
+                               FontFamily="Selawik"
+                               FontStyle="Oblique">
                     </TextBlock>
                     <TextBlock Margin="0,10,0,0" 
                                Name="Forecast18Text"
@@ -432,7 +468,9 @@
                     <TextBlock Margin="0,10,0,0" 
                                Name="Day19Text"
                                TextWrapping="Wrap"
-                               FontSize="18">
+                                FontSize="22"
+                               FontFamily="Selawik"
+                               FontStyle="Oblique">
                     </TextBlock>
                     <TextBlock Margin="0,10,0,0" 
                                Name="Forecast19Text"
@@ -452,7 +490,9 @@
                     <TextBlock Margin="0,10,0,0" 
                                Name="Day20Text"
                                TextWrapping="Wrap"
-                               FontSize="18">
+                                FontSize="22"
+                               FontFamily="Selawik"
+                               FontStyle="Oblique">
                     </TextBlock>
                     <TextBlock Margin="0,10,0,0" 
                                Name="Forecast20Text"
