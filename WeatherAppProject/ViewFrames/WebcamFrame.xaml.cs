@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using WeatherAppProject.Data;
+using WeatherAppProject.Model;
 using WeatherAppProject.ViewModel;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -49,7 +50,7 @@ namespace WeatherAppProject.ViewFrames
                 var cityToUpper = Conditions.FirstCharToUpper(city);
                 var country = countryCombo.SelectedValue.ToString();
 
-                ForeCastRootObject wheaterData = await WeatherFacade.GetWeather10DayForecast(country, city);
+                RootObject wheaterData = await WeatherFacade.GetWeather10DayForecast(country, city);
 
                 if (wheaterData.forecast == null)
                 {

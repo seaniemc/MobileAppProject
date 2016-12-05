@@ -91,6 +91,12 @@ namespace WeatherAppProject.ViewFrames
                     HighTempDescText.Text = myCityWeather.trip.chance_of.tempoverninety.description.ToString();
                     HighTempNameText.Text = myCityWeather.trip.chance_of.tempoverninety.percentage.ToString() + " %";
 
+                    MidTempText.Text = myCityWeather.trip.chance_of.tempoverfreezing.description.ToString();
+                    MidTempDescText.Text = myCityWeather.trip.chance_of.tempoverfreezing.percentage.ToString() + " %";
+
+                    WarmTempText.Text = myCityWeather.trip.chance_of.tempoversixty.description.ToString();
+                    WarmTempDescText.Text = myCityWeather.trip.chance_of.tempoversixty.percentage.ToString() + " %";
+
                     MyProgressRing.IsActive = false;
                     MyProgressRing.Visibility = Visibility.Collapsed;
 

@@ -66,33 +66,33 @@ namespace WeatherAppProject
             return cityResult;
         }
 
-        public async static Task<ForeCastRootObject>GetWeatherForecastData(string countryCode, string city)
+        public async static Task<RootObject> GetWeatherForecastData(string countryCode, string city)
         {
             var http = new HttpClient();
             var url = String.Format("http://api.wunderground.com/api/817ffb35035be408/forecast/q/{0}/{1}.json", countryCode, city);
             var response = await http.GetAsync(url);
             var jsonMessage = await response.Content.ReadAsStringAsync();
-            var serializer = new DataContractJsonSerializer(typeof(ForeCastRootObject));
+            var serializer = new DataContractJsonSerializer(typeof(RootObject));
 
             var ms = new MemoryStream(Encoding.UTF8.GetBytes(jsonMessage));
 
-            var cityResult = (ForeCastRootObject)serializer.ReadObject(ms);
+            var cityResult = (RootObject)serializer.ReadObject(ms);
 
             return cityResult;
         }
    
 
-        public async static Task<ForeCastRootObject> GetWeather10DayForecast(string countryCode, string city)
+        public async static Task<RootObject> GetWeather10DayForecast(string countryCode, string city)
         {
             var http = new HttpClient();
             var url = String.Format("http://api.wunderground.com/api/817ffb35035be408/forecast10day/q/{0}/{1}.json", countryCode, city);
             var response = await http.GetAsync(url);
             var jsonMessage = await response.Content.ReadAsStringAsync();
-            var serializer = new DataContractJsonSerializer(typeof(ForeCastRootObject));
+            var serializer = new DataContractJsonSerializer(typeof(RootObject));
 
             var ms = new MemoryStream(Encoding.UTF8.GetBytes(jsonMessage));
 
-            var cityResult = (ForeCastRootObject)serializer.ReadObject(ms);
+            var cityResult = (RootObject)serializer.ReadObject(ms);
 
             return cityResult;
         }

@@ -53,7 +53,7 @@ namespace WeatherAppProject.ViewFrames
                 var country = countryCombo.SelectedValue.ToString();
 
 
-                ForeCastRootObject myCityWeather = await WeatherFacade.GetWeatherForecastData(country, city);
+                RootObject myCityWeather = await WeatherFacade.GetWeatherForecastData(country, city);
 
 
                 if (myCityWeather.forecast == null)
