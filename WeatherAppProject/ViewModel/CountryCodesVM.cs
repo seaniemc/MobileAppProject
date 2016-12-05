@@ -17,11 +17,11 @@ namespace WeatherAppProject.ViewModel
         {
             readFile = new ReadInFile();
             _SelectedIndex = -1;
-            // Load the database
+          
             foreach (var codes in readFile.Contrylist)
             {
                 var np = new CodesViewModel(codes);
-                //np.PropertyChanged += Dogs_OnNotifyPropertyChanged;
+               
                 _CountryCodes.Add(np);
             }
         }
@@ -44,7 +44,7 @@ namespace WeatherAppProject.ViewModel
         }
 
         int _SelectedIndex;
-        //private PropertyChangedEventHandler //Dogs_OnNotifyPropertyChanged;
+      
 
         public int SelectedIndex
         {

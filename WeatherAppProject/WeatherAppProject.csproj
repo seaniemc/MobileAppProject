@@ -97,8 +97,8 @@
     </Compile>
     <Compile Include="Convertors\ObjectsExsistToVisible.cs" />
     <Compile Include="Data\ForecastRootObj.cs" />
-    <Compile Include="ViewFrames\AstronomyFrame.xaml.cs">
-      <DependentUpon>AstronomyFrame.xaml</DependentUpon>
+    <Compile Include="ViewFrames\ChanceOfFrame.xaml.cs">
+      <DependentUpon>ChanceOfFrame.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewFrames\ConditionsFrame.xaml.cs">
       <DependentUpon>ConditionsFrame.xaml</DependentUpon>
@@ -109,8 +109,8 @@
     <Compile Include="ViewFrames\HomeFrame.xaml.cs">
       <DependentUpon>HomeFrame.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewFrames\WebcamFrame.xaml.cs">
-      <DependentUpon>WebcamFrame.xaml</DependentUpon>
+    <Compile Include="ViewFrames\TenForecastFrame.xaml.cs">
+      <DependentUpon>TenForecastFrame.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\CodesViewModel.cs" />
     <Compile Include="ViewModel\CountryCodesVM.cs" />
@@ -152,7 +152,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="ViewFrames\AstronomyFrame.xaml">
+    <Page Include="ViewFrames\ChanceOfFrame.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -168,7 +168,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ViewFrames\WebcamFrame.xaml">
+    <Page Include="ViewFrames\TenForecastFrame.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -30,7 +30,7 @@
                                                                        
                       DisplayMemberPath="Name"
                       SelectedValuePath="Code"
-                      MinWidth="250">
+                      MinWidth="125">
             </ComboBox>
         </StackPanel>
         <StackPanel  Margin="0,15,0,0" 

@@ -64,13 +64,13 @@ namespace WeatherAppProject
             {
                 MyFrame.Navigate(typeof(ForecastFrame));
                 TitleTextBlock.Text = "4 Day Forecast";
-            }             
-            else if (Webcam.IsSelected)
+            }
+            else if(TenForecast.IsSelected)
             {
                 MyFrame.Navigate(typeof(WebcamFrame));
                 TitleTextBlock.Text = "10 Day Forecast";
             }
-            else if (Astronomy.IsSelected)
+            else if (ChancesOf.IsSelected)
             {
                 MyFrame.Navigate(typeof(AstronomyFrame));
                 TitleTextBlock.Text = "Chance's Of %";

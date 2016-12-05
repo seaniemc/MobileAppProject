@@ -1,7 +1,7 @@
 App.xbf
 MainPage.xbf
-ViewFrames\AstronomyFrame.xbf
+ViewFrames\ChanceOfFrame.xbf
 ViewFrames\ConditionsFrame.xbf
 ViewFrames\ForecastFrame.xbf
 ViewFrames\HomeFrame.xbf
-ViewFrames\WebcamFrame.xbf
+ViewFrames\TenForecastFrame.xbf

@@ -67,13 +67,14 @@
                             <TextBlock FontSize="24" Margin="20,0,0,0">4 Day Forecast</TextBlock>
                         </StackPanel>
                     </ListBoxItem>
-                    <ListBoxItem x:ConnectionId='6' Name="Astronomy">
+                    
+                    <ListBoxItem x:ConnectionId='6' Name="TenForecast">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE819;" />
                             <TextBlock FontSize="24" Margin="20,0,0,0">10 Day Forecast</TextBlock>
                         </StackPanel>
                     </ListBoxItem>
-                    <ListBoxItem x:ConnectionId='7' Name="Webcam">
+                    <ListBoxItem x:ConnectionId='7' Name="ChancesOf">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE94C;" />
                             <TextBlock FontSize="24" Margin="20,0,0,0">Chance's Of %</TextBlock>

@@ -32,7 +32,7 @@
                               SelectedIndex="{x:Bind ReadInFile.SelectedIndex}"
                               DisplayMemberPath="Name"
                               SelectedValuePath="Code"
-                              MinWidth="250">
+                              MinWidth="180">
                     </ComboBox>
                 </StackPanel>
                 <StackPanel  Margin="0,15,0,0" 
