@@ -15,5 +15,12 @@ The Modell folder holds the classes which construct the model of the data produc
 Although the application does not adhere to the MVVM architecture design pattern. The feature, which allows users to select countries, was programed using the MVVM pattern. The ViewModel folder holds the classes CodesViewModel.cs, CountryCodesVM.cs, ViewModelHelper.cs all of these classes are used to create the View Model and Observable Collection which holds the list of the country codes and names. 
 
 ###ViewFrames
+The ViewFrame folder, holds the different views HomeFrame, ConditionsFrame, ForecastFrame, TenForecastFrame and ChsanceOfFrame. Inside the MainPage.xmal we use a frame tag which when different buttons are selected, injects the different views into the place. 
+
+###LocationManger
+The LocationManger.cs class, is responisible for generating the GPS coordinates for the device. These coordinates are used to return the weather for the location. 
+
+###MainPage
+Holds the UI structure which is present throughout the project. The app uses the Hamburger Navigation model.
 
 
