@@ -29,10 +29,11 @@ namespace WeatherAppProject
         public MainPage()
         {
             this.InitializeComponent();
+            //Initialises ViewModel
             ReadInFile = new CountryCodesVM("CountryCodes");
 
             this.InitializeComponent();
-  
+            // Sets the initial frame to be HomeFrame
             MyFrame.Navigate(typeof(HomeFrame));
             TitleTextBlock.Text = "Current Weather";
             Home.IsSelected = true;
@@ -40,14 +41,15 @@ namespace WeatherAppProject
         }
          public CountryCodesVM ReadInFile { get; set; }
 
-
+        //opens and closes MySplitView
         private void HamburgerButton_Click(object sender, RoutedEventArgs e)
         {
             MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
         }
 
         
-
+        //Selctions in the hamburger navigation 
+        
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (Home.IsSelected)
@@ -66,12 +68,12 @@ namespace WeatherAppProject
                 TitleTextBlock.Text = "4 Day Forecast";
             }
             else if(TenForecast.IsSelected)
-            {
+            {   //WebCamFrame is re-named to TenForecastFrame
                 MyFrame.Navigate(typeof(WebcamFrame));
                 TitleTextBlock.Text = "10 Day Forecast";
             }
             else if (ChancesOf.IsSelected)
-            {
+            {   //AstronomyFrame is re-named to ChanceOfFrame
                 MyFrame.Navigate(typeof(AstronomyFrame));
                 TitleTextBlock.Text = "Chance's Of %";
             }

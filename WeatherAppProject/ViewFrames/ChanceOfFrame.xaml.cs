@@ -34,8 +34,7 @@ namespace WeatherAppProject.ViewFrames
 
         private async void ConditionsButton_Click(object sender, RoutedEventArgs e)
         {
-           
-
+           //If the user presses find without 
             if (CityTextBox.Text == "" && countryCombo.SelectedValue == null)
             {
                 CityTextBox.PlaceholderText = "ENTER CITY NAME";
@@ -56,7 +55,7 @@ namespace WeatherAppProject.ViewFrames
 
            
            
-                RootObject myCityWeather = await WeatherFacade.GetWeatherAstronomy(country, city);
+                RootObject myCityWeather = await WeatherFacade.GetWeatherChancesOf(country, city);
 
                 if (myCityWeather.trip == null)
                 {
