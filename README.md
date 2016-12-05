@@ -1,6 +1,6 @@
 # The Wheater App
 
-The Wheater App, is an app developed for the Universial Windows Platform. The app was a project assigned, as part of the Mobile Application's 3 module, in 4th year Software Development at GMIT.  The Application consumes 2 API's to get the wheater conditions. The first API is the [OpenWheaterMap](http://openweathermap.org/), this returns current conditions based on the Geo location of the device. The second is the [Wunderground](https://www.wunderground.com/), which returns wheater conditons based on the country selected and city entered by the user.  
+The Wheater App, is an app developed for the Universial Windows Platform. The app was a project assigned, as part of the Mobile Applications module, in 4th year Software Development at GMIT.  The Application consumes 2 API's to get the wheater conditions. The first API is the [OpenWheaterMap](http://openweathermap.org/), this returns current conditions based on the Geo location of the device. The second is the [Wunderground](https://www.wunderground.com/), which returns wheater conditons based on the country selected and city entered by the user.  
 When the app starts up, users are given the codnditions based on the their current location. The Application offers users the ability to retrieve data based on the Conditions, 4 Day Forecast, 10 Day Forecast And Chances's Of for any country on the list. 
 
 ##Project Structure and Architecture 
