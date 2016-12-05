@@ -144,3 +144,15 @@ Returned Json
 * Open the project .sln file using Visual Studio 2015.
 * Run the project.
 
+##References
+https://channel9.msdn.com/Series/Windows-10-development-for-absolute-beginners
+https://channel9.msdn.com/Series/Windows-10-development-for-absolute-beginners/UWP-058-UWP-Weather-Setup-and-Working-with-the-Weather-API
+https://channel9.msdn.com/Series/Windows-10-development-for-absolute-beginners/UWP-059-UWP-Weather-Accessing-the-GPS-Location
+https://www.wunderground.com/weather/api/d/docs?d=index
+http://openweathermap.org/api
+http://stackoverflow.com/questions/4135317/make-first-letter-of-a-string-upper-case-for-maximum-performance
+http://stackoverflow.com/questions/4505825/convert-utc-time-in-unix-time-format-to-a-readable-datetime-format
+http://www.themethodology.net/2013/12/how-to-convert-degrees-to-cardinal.html
+http://blog.jerrynixon.com/2015/04/implementing-hamburger-button-with.html
+http://json2csharp.com/
+https://learnonline.gmit.ie/pluginfile.php/153102/mod_resource/content/0/LAB2-Problems.pdf
