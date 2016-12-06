@@ -40,7 +40,8 @@ namespace WeatherAppProject.ViewFrames
 
         private async void ConditionsButton_Click(object sender, RoutedEventArgs e)
         {
-            if (CityTextBox.Text == "" && countryCombo.SelectedValue == null)
+            if (CityTextBox.Text == "" && countryCombo.SelectedValue == null
+               || CityTextBox.Text == "" || countryCombo.SelectedValue == null)
             {
                 CityTextBox.PlaceholderText = "ENTER CITY NAME";
                 countryCombo.PlaceholderText = "SELECT COUNTRY";
