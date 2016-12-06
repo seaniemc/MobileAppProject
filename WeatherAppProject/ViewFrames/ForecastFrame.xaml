@@ -43,7 +43,7 @@
                              PlaceholderText="Enter City Name"
                              FontSize="18"/>
                     <Button Margin="0,10,0,0" Name="ConditionsButton" 
-                            Content=" FIND"
+                            Content="FIND"
                             FontStyle="Oblique"
                             Background="#57A4F7"
                             Click="ConditionsButton_Click">

@@ -44,7 +44,7 @@
         </StackPanel>
         <StackPanel  Margin="10,15,10,0" Grid.Column="1" Grid.Row="0" Orientation="Vertical" HorizontalAlignment="Center">
             <Button Name="ConditionsButton" 
-                    Content=" FIND"
+                    Content="FIND"
                     FontStyle="Oblique"
                     Background="#57A4F7"
                     Click="ConditionsButton_Click">
