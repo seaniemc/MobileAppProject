@@ -38,7 +38,11 @@ namespace WeatherAppProject.ViewFrames
 
         private async void ConditionsButton_Click(object sender, RoutedEventArgs e)
         {
-            if (CityTextBox.Text == "" && countryCombo.SelectedValue == null)
+            // Checks to see if the user has entered the correct details 
+            //if both fields are empty or just one, it will request the user to
+            //renter the values.
+            if (CityTextBox.Text == "" && countryCombo.SelectedValue == null
+                || CityTextBox.Text == "" || countryCombo.SelectedValue == null)
             {
                 CityTextBox.PlaceholderText = "ENTER CITY NAME";
                 countryCombo.PlaceholderText = "SELECT COUNTRY";
@@ -46,25 +50,28 @@ namespace WeatherAppProject.ViewFrames
             else
             {
                 var city = CityTextBox.Text.ToString();
+                //replaces any spaces with an _ 
+                //All city names with more than one word need _ between each word
                 city = city.Replace(" ", "_");
+                //Chances the first letter of each city name word to upper case
                 var cityToUpper = Conditions.FirstCharToUpper(city);
+                //passes the counrty code assioated with each country name 
                 var country = countryCombo.SelectedValue.ToString();
 
+                //Makes the call to the API
                 RootObject wheaterData = await WeatherFacade.GetWeather10DayForecast(country, city);
 
+                //if it returns a null value, the user re-enter the values
                 if (wheaterData.forecast == null)
                 {
                     CityTextBox.Text = "";
                     CityTextBox.PlaceholderText = "Re-enter City Name";
 
-                    //MyProgressRing.IsActive = false;
-                    //MyProgressRing.Visibility = Visibility.Collapsed;
                 }
                 else
                 {
-                    //int i = 0;
-                    //string icon;
-                    //Day1Text.Text = day.title.ToString();
+                    //The data is returned as a list loops over the list and adds to the 
+                    //txtForecastList list
                     foreach (var day in wheaterData.forecast.txt_forecast.forecastday)
                     {
 
@@ -72,14 +79,10 @@ namespace WeatherAppProject.ViewFrames
                         txtForecastList.Add(day.fcttext_metric.ToString());
                         txtForecastList.Add(day.icon_url.ToString());
 
-                        //Day1Text.Text = txtForecastList[0].ToString();
-                        //Forecast1Text.Text = txtForecastList[1].ToString();
-                        //icon = String.Format(txtForecastList[2].ToString());
-                        //Weather1Image.Source = new BitmapImage(new Uri(icon, UriKind.Absolute));
-
                     }
                 }
 
+                //Addes each element to there xmal counter part.
                 Day1Text.Text = txtForecastList[0].ToString();
                 Forecast1Text.Text = txtForecastList[1].ToString();
                 string icon = String.Format(txtForecastList[2].ToString());
@@ -180,8 +183,6 @@ namespace WeatherAppProject.ViewFrames
                 icon = String.Format(txtForecastList[59].ToString());
                 Weather20Image.Source = new BitmapImage(new Uri(icon, UriKind.Absolute));
 
-                //MyProgressRing.IsActive = false;
-                //MyProgressRing.Visibility = Visibility.Collapsed;
             }
         }
     }

@@ -7,6 +7,7 @@ using WeatherAppProject.Model;
 
 namespace WeatherAppProject.ViewModel
 {
+    //Creates the properties for the observable collection
     
     public class CodesViewModel : NotificationBase<CountryCodes>
     {

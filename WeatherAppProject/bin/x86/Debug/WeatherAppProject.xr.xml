@@ -80,6 +80,8 @@
       <RootProperty Name="FontFamily" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="Content" />
+      <RootProperty Name="FontStyle" />
+      <RootProperty Name="Margin" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="WeatherAppProject.MainPage" />

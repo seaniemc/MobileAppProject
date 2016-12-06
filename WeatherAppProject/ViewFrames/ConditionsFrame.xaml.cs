@@ -37,6 +37,9 @@ namespace WeatherAppProject.ViewFrames
 
         private async void ConditionsButton_Click(object sender, RoutedEventArgs e)
         {
+            // Checks to see if the user has entered the correct details 
+            //if both fields are empty or just one, it will request the user to
+            //renter the values.
             if (CityTextBox.Text == "" && countryCombo.SelectedValue == null
                 || CityTextBox.Text == "" || countryCombo.SelectedValue == null)
             {
@@ -56,7 +59,8 @@ namespace WeatherAppProject.ViewFrames
 
                 RootObject myCityWeather = await WeatherFacade.GetWeatherConditions(country, cityToUpper);
                 //Grid.Row 1
-                
+
+               // if it returns a null value, the user re - enter the values
                 if (myCityWeather.current_observation == null)
                 {
                     CityTextBox.Text = "";

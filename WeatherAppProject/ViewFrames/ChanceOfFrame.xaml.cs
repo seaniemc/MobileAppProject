@@ -34,8 +34,11 @@ namespace WeatherAppProject.ViewFrames
 
         private async void ConditionsButton_Click(object sender, RoutedEventArgs e)
         {
-           //If the user presses find without 
-            if (CityTextBox.Text == "" && countryCombo.SelectedValue == null)
+            // Checks to see if the user has entered the correct details 
+            //if both fields are empty or just one, it will request the user to
+            //renter the values.
+            if (CityTextBox.Text == "" && countryCombo.SelectedValue == null
+                || CityTextBox.Text == "" || countryCombo.SelectedValue == null)
             {
                 CityTextBox.PlaceholderText = "ENTER CITY NAME";
                 countryCombo.PlaceholderText = "SELECT COUNTRY";
@@ -73,8 +76,7 @@ namespace WeatherAppProject.ViewFrames
                     //Wind               
                     WindText.Text = myCityWeather.trip.chance_of.chanceofwindyday.percentage.ToString() + " %";
 
-                    //Clouds
-                    // MostlyCloudsDescText.Text = myCityWeather.trip.chance_of.chanceofcloudyday.description.ToString();
+                    //Cloudy
                     MostlyCloudsDescText.Text = myCityWeather.trip.chance_of.chanceofcloudyday.percentage.ToString() + " %";
 
                     //Snow

@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace WeatherAppProject.ViewModel
 {
+    //This is Generic Class used to by the observable collection. 
     public class NotificationBase : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;

@@ -54,8 +54,10 @@
                     <TextBox x:ConnectionId='62' Name="CityTextBox" 
                              PlaceholderText="Enter City Name"
                              FontSize="18"/>
-                    <Button x:ConnectionId='63' Name="ConditionsButton" 
+                    <Button x:ConnectionId='63' Margin="0,10,0,0" Name="ConditionsButton" 
                             Content=" FIND"
+                            FontStyle="Oblique"
+                            Background="#57A4F7"
                                                           >
                     </Button>
                 </StackPanel>
@@ -494,7 +496,7 @@
                                FontFamily="Selawik"
                                FontStyle="Oblique">
                     </TextBlock>
-                    <TextBlock x:ConnectionId='4' Margin="0,10,0,0" 
+                    <TextBlock x:ConnectionId='4' Margin="0,10,0,10" 
                                Name="Forecast20Text"
                                TextWrapping="Wrap"
                                FontSize="18"></TextBlock>

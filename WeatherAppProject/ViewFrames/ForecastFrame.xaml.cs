@@ -48,14 +48,17 @@ namespace WeatherAppProject.ViewFrames
             else
             {
                 var city = CityTextBox.Text.ToString();
+                //replaces any spaces with an _ 
+                //All city names with more than one word need _ between each word
                 city = city.Replace(" ", "_");
+                //Chances the first letter of each city name word to upper case
                 var cityToUpper = Conditions.FirstCharToUpper(city);
+                //passes the counrty code assioated with each country name 
                 var country = countryCombo.SelectedValue.ToString();
-
 
                 RootObject myCityWeather = await WeatherFacade.GetWeatherForecastData(country, city);
 
-
+                //if null user must re-enter
                 if (myCityWeather.forecast == null)
                 {
                     CityTextBox.Text = "";
@@ -66,7 +69,7 @@ namespace WeatherAppProject.ViewFrames
                 {
                     foreach (var day in myCityWeather.forecast.txt_forecast.forecastday)
                     {
-
+                        //loop 
                         txtForecastList.Add(day.title.ToString());
                         txtForecastList.Add(day.fcttext_metric.ToString());
                         txtForecastList.Add(day.icon_url.ToString());

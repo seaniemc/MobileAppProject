@@ -42,8 +42,10 @@
                     <TextBox x:ConnectionId='26' Name="CityTextBox" 
                              PlaceholderText="Enter City Name"
                              FontSize="18"/>
-                    <Button x:ConnectionId='27' Name="ConditionsButton" 
+                    <Button x:ConnectionId='27' Margin="0,10,0,0" Name="ConditionsButton" 
                             Content=" FIND"
+                            FontStyle="Oblique"
+                            Background="#57A4F7"
                                                           >
                     </Button>
                 </StackPanel>

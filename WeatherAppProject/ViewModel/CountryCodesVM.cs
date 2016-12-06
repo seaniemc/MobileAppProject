@@ -9,6 +9,7 @@ using WeatherAppProject.ViewModel;
 
 namespace WeatherAppProject.ViewModel
 {
+    //This class creates the view model with the Observable collection
     public class CountryCodesVM : NotificationBase
     {
         ReadInFile readFile;
